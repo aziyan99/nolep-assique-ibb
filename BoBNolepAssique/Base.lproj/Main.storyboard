@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YL5-SE-VPP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Onu-l9-8qw">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,55 +8,73 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Rekapitulasi-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BoBNolepAssique" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6PK-CF-so1">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41298162939999999" green="0.7015106082" blue="0.69831067319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K47-AX-Xm2">
+                                <rect key="frame" x="23" y="160" width="344" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13C-d8-psc">
+                                <rect key="frame" x="23" y="265" width="344" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRP-fe-wH0">
+                                <rect key="frame" x="23" y="347" width="344" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CEX-Dw-QME">
+                                <rect key="frame" x="23" y="538" width="344" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gwz-fg-pIK"/>
+                    <navigationItem key="navigationItem" title="Rekapitulasi" id="gwz-fg-pIK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3305" y="-628"/>
+            <point key="canvasLocation" x="3304.6153846153843" y="-628.43601895734594"/>
         </scene>
-        <!--View Controller-->
+        <!--Keinginan-->
         <scene sceneID="PlI-BZ-VBg">
             <objects>
                 <viewController id="bQe-1B-XBT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="44h-AH-FMN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFi-q6-WdT">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41298162939999999" green="0.7015106082" blue="0.69831067319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TY8-de-xoq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nly-4R-eQ0"/>
+                    <navigationItem key="navigationItem" title="Keinginan" id="nly-4R-eQ0">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Z43-cY-eow"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBE-iL-MXc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3305" y="126"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Mbz-uL-K1C">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YL5-SE-VPP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lDU-cy-WIq">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Onu-l9-8qw" kind="relationship" relationship="rootViewController" id="4Ii-JG-tyj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kBQ-di-QeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="138.46153846153845" y="125.82938388625591"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CAT-TC-3UQ">
@@ -84,8 +102,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CvJ-F1-GAY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Rekapitulasi" image="doc.text.magnifyingglass" catalog="system" id="KTf-Kd-4iO"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r4u-xL-7NT">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="r4u-xL-7NT">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -103,8 +121,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JtK-QQ-i6h" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Keinginan" image="bag" catalog="system" id="iaj-ch-wKR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b4H-eO-qI5">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="b4H-eO-qI5">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -116,17 +134,24 @@
             </objects>
             <point key="canvasLocation" x="2488" y="126"/>
         </scene>
-        <!--View Controller-->
+        <!--Pengaturan-->
         <scene sceneID="c08-Ag-TE7">
             <objects>
                 <viewController id="zAy-VU-k6n" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a4l-co-c3G">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q4k-6c-YLu">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41298162939999999" green="0.7015106082" blue="0.69831067319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4Y4-so-2d0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="m5b-Se-lkg"/>
+                    <navigationItem key="navigationItem" title="Pengaturan" id="m5b-Se-lkg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9Z-rf-P7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,8 +163,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cA2-Fx-NEN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Pengaturan" image="gearshape" catalog="system" id="nlQ-EB-Xh4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ajn-Ik-BaH">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ajn-Ik-BaH">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -156,8 +181,12 @@
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="doc.text.magnifyingglass" catalog="system" width="113" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
