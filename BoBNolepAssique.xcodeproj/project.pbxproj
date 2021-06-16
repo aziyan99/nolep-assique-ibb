@@ -15,6 +15,8 @@
 		0853706C2678985500D30D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0853706B2678985500D30D8C /* Assets.xcassets */; };
 		0853706F2678985500D30D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0853706D2678985500D30D8C /* LaunchScreen.storyboard */; };
 		08F91CCE267997B9008BC4DE /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F91CCD267997B9008BC4DE /* Intro.storyboard */; };
+		08F91CD02679F570008BC4DE /* Rekapitulasi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F91CCF2679F570008BC4DE /* Rekapitulasi.storyboard */; };
+		08F91CD22679F588008BC4DE /* Pengaturan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F91CD12679F588008BC4DE /* Pengaturan.storyboard */; };
 		905F3B3B2679F2AD008B1A84 /* Keinginan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905F3B3A2679F2AD008B1A84 /* Keinginan.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		0853706E2678985500D30D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		085370702678985500D30D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08F91CCD267997B9008BC4DE /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		08F91CCF2679F570008BC4DE /* Rekapitulasi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rekapitulasi.storyboard; sourceTree = "<group>"; };
+		08F91CD12679F588008BC4DE /* Pengaturan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pengaturan.storyboard; sourceTree = "<group>"; };
 		905F3B3A2679F2AD008B1A84 /* Keinginan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keinginan.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +70,8 @@
 				085370612678985400D30D8C /* SceneDelegate.swift */,
 				085370632678985400D30D8C /* ViewController.swift */,
 				085370652678985400D30D8C /* Main.storyboard */,
+				08F91CD12679F588008BC4DE /* Pengaturan.storyboard */,
+				08F91CCF2679F570008BC4DE /* Rekapitulasi.storyboard */,
 				08F91CCD267997B9008BC4DE /* Intro.storyboard */,
 				0853706B2678985500D30D8C /* Assets.xcassets */,
 				0853706D2678985500D30D8C /* LaunchScreen.storyboard */,
@@ -133,10 +139,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F91CD22679F588008BC4DE /* Pengaturan.storyboard in Resources */,
 				905F3B3B2679F2AD008B1A84 /* Keinginan.storyboard in Resources */,
 				0853706F2678985500D30D8C /* LaunchScreen.storyboard in Resources */,
 				0853706C2678985500D30D8C /* Assets.xcassets in Resources */,
 				085370672678985400D30D8C /* Main.storyboard in Resources */,
+				08F91CD02679F570008BC4DE /* Rekapitulasi.storyboard in Resources */,
 				08F91CCE267997B9008BC4DE /* Intro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
