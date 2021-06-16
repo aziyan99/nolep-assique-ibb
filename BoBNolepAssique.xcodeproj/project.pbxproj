@@ -15,6 +15,7 @@
 		0853706C2678985500D30D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0853706B2678985500D30D8C /* Assets.xcassets */; };
 		0853706F2678985500D30D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0853706D2678985500D30D8C /* LaunchScreen.storyboard */; };
 		08F91CCE267997B9008BC4DE /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F91CCD267997B9008BC4DE /* Intro.storyboard */; };
+		905F3B3B2679F2AD008B1A84 /* Keinginan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905F3B3A2679F2AD008B1A84 /* Keinginan.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0853706E2678985500D30D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		085370702678985500D30D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08F91CCD267997B9008BC4DE /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		905F3B3A2679F2AD008B1A84 /* Keinginan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keinginan.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				0853706D2678985500D30D8C /* LaunchScreen.storyboard */,
 				085370702678985500D30D8C /* Info.plist */,
 				085370682678985400D30D8C /* BoBNolepAssique.xcdatamodeld */,
+				905F3B3A2679F2AD008B1A84 /* Keinginan.storyboard */,
 			);
 			path = BoBNolepAssique;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				905F3B3B2679F2AD008B1A84 /* Keinginan.storyboard in Resources */,
 				0853706F2678985500D30D8C /* LaunchScreen.storyboard in Resources */,
 				0853706C2678985500D30D8C /* Assets.xcassets in Resources */,
 				085370672678985400D30D8C /* Main.storyboard in Resources */,

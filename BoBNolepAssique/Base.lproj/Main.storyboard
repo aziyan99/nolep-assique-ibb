@@ -52,27 +52,12 @@
             <point key="canvasLocation" x="3304.6153846153843" y="-628.43601895734594"/>
         </scene>
         <!--Keinginan-->
-        <scene sceneID="PlI-BZ-VBg">
+        <scene sceneID="0EG-iY-cu4">
             <objects>
-                <viewController id="bQe-1B-XBT" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="44h-AH-FMN">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFi-q6-WdT">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="201"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.41298162939999999" green="0.7015106082" blue="0.69831067319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="TY8-de-xoq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Keinginan" id="nly-4R-eQ0">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Z43-cY-eow"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FBE-iL-MXc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Keinginan" id="3c5-Q9-ls3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6Od-cQ-wyN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRA-Iw-i1k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3305" y="126"/>
         </scene>
@@ -128,7 +113,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bQe-1B-XBT" kind="relationship" relationship="rootViewController" id="JhK-lG-Rjb"/>
+                        <segue destination="3c5-Q9-ls3" kind="relationship" relationship="rootViewController" id="Nqd-E8-AV5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6F-2K-GdH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,7 +167,6 @@
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="doc.text.magnifyingglass" catalog="system" width="113" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
