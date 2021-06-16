@@ -22,7 +22,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2926.1538461538462" y="125.82938388625591"/>
+            <point key="canvasLocation" x="3305" y="-628"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PlI-BZ-VBg">
+            <objects>
+                <viewController id="bQe-1B-XBT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="44h-AH-FMN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TY8-de-xoq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nly-4R-eQ0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBE-iL-MXc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3305" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mbz-uL-K1C">
@@ -54,17 +70,19 @@
                     </tabBar>
                     <connections>
                         <segue destination="CvJ-F1-GAY" kind="relationship" relationship="viewControllers" id="pP4-gg-wTP"/>
+                        <segue destination="JtK-QQ-i6h" kind="relationship" relationship="viewControllers" id="NCz-kd-tBf"/>
+                        <segue destination="cA2-Fx-NEN" kind="relationship" relationship="viewControllers" id="y2f-ML-vxI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDc-It-OAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1067.6923076923076" y="125.82938388625591"/>
         </scene>
-        <!--Item-->
+        <!--Rekapitulasi-->
         <scene sceneID="oxr-48-hp3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CvJ-F1-GAY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="KTf-Kd-4iO"/>
+                    <tabBarItem key="tabBarItem" title="Rekapitulasi" image="doc.text.magnifyingglass" catalog="system" id="KTf-Kd-4iO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r4u-xL-7NT">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -77,10 +95,67 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayG-E7-0md" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1996.9230769230769" y="125.82938388625591"/>
+            <point key="canvasLocation" x="2488" y="-628"/>
+        </scene>
+        <!--Keinginan-->
+        <scene sceneID="PaB-eV-gpB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JtK-QQ-i6h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Keinginan" image="bag" catalog="system" id="iaj-ch-wKR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b4H-eO-qI5">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bQe-1B-XBT" kind="relationship" relationship="rootViewController" id="JhK-lG-Rjb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6F-2K-GdH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2488" y="126"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c08-Ag-TE7">
+            <objects>
+                <viewController id="zAy-VU-k6n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a4l-co-c3G">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Y4-so-2d0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="m5b-Se-lkg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9Z-rf-P7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3305" y="894"/>
+        </scene>
+        <!--Pengaturan-->
+        <scene sceneID="Wv1-4f-hHG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cA2-Fx-NEN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pengaturan" image="gearshape" catalog="system" id="nlQ-EB-Xh4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ajn-Ik-BaH">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zAy-VU-k6n" kind="relationship" relationship="rootViewController" id="G5n-zL-v75"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFQ-k1-NLk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2488" y="894"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="doc.text.magnifyingglass" catalog="system" width="113" height="128"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
