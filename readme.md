@@ -7,6 +7,13 @@
 
 
 ### Todos
+- [ ] Update skeleton
+- [ ] Fixing skeleton
+- [ ] Finalize UI
+- [ ] Logic prepare
+- [ ] Logic fixing
+- [ ] Manual testing
+- [ ] Debugging
 - [ ] Still empty here :)
 
 
