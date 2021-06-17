@@ -31,7 +31,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AppLogo" width="234" height="428"/>
+        <image name="AppLogo" width="234" height="495"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
