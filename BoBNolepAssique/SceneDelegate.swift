@@ -21,16 +21,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         // first time huh?
-        if firstTimeHuh() {
-            let storyboard = UIStoryboard(name: "Pendapatan", bundle: nil)
-            guard let pendapatanViewController = storyboard.instantiateViewController(identifier: "PendapatanViewController") as? PendapatanViewController else{
+        if !isFirstTimeHuh() {
+            let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil)
+            guard let onBoardingViewController = storyboard.instantiateViewController(identifier: "OnBoardingViewController") as? OnBoardingViewController else{
                 print("ViewController not found")
                 return
             }
-            let rootNavigationController = UINavigationController(rootViewController: pendapatanViewController)
-            rootNavigationController.navigationBar.prefersLargeTitles = true
-            window?.rootViewController = rootNavigationController
-            
+            window?.rootViewController = onBoardingViewController
         }
         else{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -23,6 +23,7 @@ class PerkiraanBiayaViewController: ViewController {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainTabBarController = mainStoryboard.instantiateViewController(identifier: "MainTabBarController")
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+        isFirstTime.set(true, forKey: keyFirstTime)
     }
     
     @IBAction func didTapUlangiBtn(_ sender: Any) {
