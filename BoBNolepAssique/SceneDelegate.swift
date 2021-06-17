@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        // first time huh?
         if firstTimeHuh() {
             let storyboard = UIStoryboard(name: "Pendapatan", bundle: nil)
             guard let pendapatanViewController = storyboard.instantiateViewController(identifier: "PendapatanViewController") as? PendapatanViewController else{
