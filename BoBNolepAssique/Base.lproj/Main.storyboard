@@ -10,11 +10,12 @@
         <scene sceneID="0EG-iY-cu4">
             <objects>
                 <viewControllerPlaceholder storyboardName="Keinginan" id="3c5-Q9-ls3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="2Fp-O0-fbO"/>
                     <navigationItem key="navigationItem" id="6Od-cQ-wyN"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRA-Iw-i1k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3305" y="126"/>
+            <point key="canvasLocation" x="3028" y="126"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CAT-TC-3UQ">
@@ -28,9 +29,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="CvJ-F1-GAY" kind="relationship" relationship="viewControllers" id="pP4-gg-wTP"/>
-                        <segue destination="JtK-QQ-i6h" kind="relationship" relationship="viewControllers" id="NCz-kd-tBf"/>
-                        <segue destination="cA2-Fx-NEN" kind="relationship" relationship="viewControllers" id="y2f-ML-vxI"/>
+                        <segue destination="rMZ-21-q83" kind="relationship" relationship="viewControllers" id="1b1-1y-DDm"/>
+                        <segue destination="xuE-V5-eDd" kind="relationship" relationship="viewControllers" id="8uh-a7-9ZX"/>
+                        <segue destination="ufp-aW-L0U" kind="relationship" relationship="viewControllers" id="WrB-1i-hPc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDc-It-OAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -38,81 +39,83 @@
             <point key="canvasLocation" x="1067.6923076923076" y="125.82938388625591"/>
         </scene>
         <!--Rekapitulasi-->
-        <scene sceneID="oxr-48-hp3">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CvJ-F1-GAY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Rekapitulasi" image="doc.text.magnifyingglass" catalog="system" id="KTf-Kd-4iO"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="r4u-xL-7NT">
-                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0Pc-uw-QKM" kind="relationship" relationship="rootViewController" id="2rE-S0-DjB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ayG-E7-0md" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2488" y="-628"/>
-        </scene>
-        <!--Rekapitulasi-->
         <scene sceneID="dsO-rC-me8">
             <objects>
                 <viewControllerPlaceholder storyboardName="Rekapitulasi" id="0Pc-uw-QKM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pCa-Xl-msp"/>
                     <navigationItem key="navigationItem" id="GTQ-OY-NN6"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39H-tm-W3t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3315" y="-628"/>
-        </scene>
-        <!--Keinginan-->
-        <scene sceneID="PaB-eV-gpB">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JtK-QQ-i6h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Keinginan" image="bag" catalog="system" id="iaj-ch-wKR"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="b4H-eO-qI5">
-                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="3c5-Q9-ls3" kind="relationship" relationship="rootViewController" id="Nqd-E8-AV5"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X6F-2K-GdH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2488" y="126"/>
-        </scene>
-        <!--Pengaturan-->
-        <scene sceneID="Wv1-4f-hHG">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cA2-Fx-NEN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pengaturan" image="gearshape" catalog="system" id="nlQ-EB-Xh4"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ajn-Ik-BaH">
-                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="HRn-f4-SbU" kind="relationship" relationship="rootViewController" id="igt-gf-dEJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TFQ-k1-NLk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2488" y="894"/>
+            <point key="canvasLocation" x="3028" y="-579"/>
         </scene>
         <!--Pengaturan-->
         <scene sceneID="Kzp-Ds-MS0">
             <objects>
                 <viewControllerPlaceholder storyboardName="Pengaturan" id="HRn-f4-SbU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="2UT-WC-BHU"/>
                     <navigationItem key="navigationItem" id="lV4-ZC-A9E"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oc3-1k-Eqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3315" y="894"/>
+            <point key="canvasLocation" x="3028" y="857"/>
+        </scene>
+        <!--Rekapitulasi-->
+        <scene sceneID="maZ-mw-9NS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rMZ-21-q83" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rekapitulasi" image="doc.text.magnifyingglass" catalog="system" id="pjD-hS-GnT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="VxG-bD-a6n">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Pc-uw-QKM" kind="relationship" relationship="rootViewController" id="faU-aL-UY1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omC-9e-hES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2276.9230769230767" y="-579.38388625592415"/>
+        </scene>
+        <!--Keinginan-->
+        <scene sceneID="k3q-tU-P5g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xuE-V5-eDd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Keinginan" image="bag" catalog="system" id="3fq-1F-saz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="qoX-7p-Ac5">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3c5-Q9-ls3" kind="relationship" relationship="rootViewController" id="WXu-lo-Q8Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qjQ-g8-h3x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2276.9230769230767" y="125.82938388625591"/>
+        </scene>
+        <!--Pengaturan-->
+        <scene sceneID="a4b-WG-fIN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ufp-aW-L0U" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pengaturan" image="gearshape" catalog="system" id="Any-NQ-PU4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="f9z-LH-3Nf">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HRn-f4-SbU" kind="relationship" relationship="rootViewController" id="WrE-ZK-BAX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXK-4C-Xlo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2276.9230769230767" y="857.34597156398104"/>
         </scene>
     </scenes>
     <resources>
