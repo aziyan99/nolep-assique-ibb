@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mCM-tx-zfV">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,14 +11,50 @@
         <!--Perkiraan Biaya View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="PerkiraanBiayaViewController" customModule="BoBNolepAssique" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PerkiraanBiayaViewController" id="Y6W-OH-hqX" customClass="PerkiraanBiayaViewController" customModule="BoBNolepAssique" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJF-iX-gze">
+                                <rect key="frame" x="16" y="720" width="358" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rvN-1z-zbI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapUlangiBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CYm-M3-jhh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dac-yw-maI">
+                                <rect key="frame" x="16" y="660" width="358" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0hz-P9-mOm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapSelesaiBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LTG-8W-gKr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hJF-iX-gze" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="1wf-fn-n0G"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hJF-iX-gze" secondAttribute="bottom" constant="40" id="3eu-VS-Jb5"/>
+                            <constraint firstItem="hJF-iX-gze" firstAttribute="top" secondItem="dac-yw-maI" secondAttribute="bottom" constant="10" id="9OZ-Pe-er9"/>
+                            <constraint firstItem="dac-yw-maI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="JQX-N1-9Na"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hJF-iX-gze" secondAttribute="trailing" constant="16" id="Opq-hf-VnA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dac-yw-maI" secondAttribute="trailing" constant="16" id="erV-dq-Hto"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dYv-LS-sDU"/>
+                    <connections>
+                        <outlet property="btnSelesai" destination="dac-yw-maI" id="Vzf-4o-QMd"/>
+                        <outlet property="btnUlangi" destination="hJF-iX-gze" id="Nlp-Ig-AVl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,7 +66,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mCM-tx-zfV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cnz-GO-dD2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -46,6 +82,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

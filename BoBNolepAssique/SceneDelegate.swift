@@ -8,7 +8,8 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
+    static let shared = SceneDelegate()
     var window: UIWindow?
 
 
@@ -17,20 +18,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-        if isFirstOpenApp() {
-            let pendapatanStoryboard: UIStoryboard = UIStoryboard(name: "Pendapatan", bundle: nil)
-            guard let rootVC = pendapatanStoryboard.instantiateViewController(identifier: "PendapatanController") as? PendapatanViewController else {
+        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        if firstTimeHuh() {
+            let storyboard = UIStoryboard(name: "Pendapatan", bundle: nil)
+            guard let pendapatanViewController = storyboard.instantiateViewController(identifier: "PendapatanViewController") as? PendapatanViewController else{
                 print("ViewController not found")
                 return
             }
-            let rootNC = UINavigationController(rootViewController: rootVC)
-            rootNC.navigationBar.prefersLargeTitles = true
-            self.window?.rootViewController = rootNC
-            self.window?.makeKeyAndVisible()
+            let rootNavigationController = UINavigationController(rootViewController: pendapatanViewController)
+            rootNavigationController.navigationBar.prefersLargeTitles = true
+            window?.rootViewController = rootNavigationController
+            
+        }
+        else{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+            window?.rootViewController = mainTabBarController
         }
         
-        
-        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -62,6 +68,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+    }
+    
+    
+    /**
+     * Customs function
+     */
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard let window = self.window else {
+            return
+        }
+        
+        // change the root view controller to your specific view controller
+        window.rootViewController = vc
     }
 
 

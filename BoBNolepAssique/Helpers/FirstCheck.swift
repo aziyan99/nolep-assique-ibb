@@ -9,6 +9,13 @@ import Foundation
 import UIKit
 import CoreData
 
-func isFirstOpenApp () -> Bool {
-    return true
+let isFirst = UserDefaults.standard
+
+func firstTimeHuh () -> Bool {
+    if isFirst.bool(forKey: "First time huh") == false {
+        isFirst.setValue(true, forKey: "First time huh")
+        return true
+    }else{
+        return false
+    }
 }
