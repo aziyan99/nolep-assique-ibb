@@ -16,6 +16,7 @@ class AddKebutuhanViewController: ViewController {
         super.viewDidLoad()
         topFormLabel.text = "DETAIL KEBUTUHAN"
         bottomFormLabel.text = "Masukkan detail data kebutuhan kamu dari nama kebutuhan, berapa banyak jumlahnya, dan total harganya."
+        bottomFormLabel.numberOfLines = 0
     }
 
     @IBAction func didTapTutupBtn(_ sender: Any) {
