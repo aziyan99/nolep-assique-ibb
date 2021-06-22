@@ -16,6 +16,6 @@ func firstTimeHuh () -> Bool {
         isFirst.setValue(true, forKey: "First time huh")
         return true
     }else{
-        return false
+        return true
     }
 }

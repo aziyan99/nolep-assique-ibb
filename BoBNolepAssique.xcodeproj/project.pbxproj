@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820FD212681BA84006DA8DD /* UIColorExtension.swift */; };
 		085370602678985400D30D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0853705F2678985400D30D8C /* AppDelegate.swift */; };
 		085370642678985400D30D8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085370632678985400D30D8C /* ViewController.swift */; };
 		085370672678985400D30D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085370652678985400D30D8C /* Main.storyboard */; };
-		0853706A2678985400D30D8C /* BoBNolepAssique.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 085370682678985400D30D8C /* BoBNolepAssique.xcdatamodeld */; };
 		0853706C2678985500D30D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0853706B2678985500D30D8C /* Assets.xcassets */; };
 		0853706F2678985500D30D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0853706D2678985500D30D8C /* LaunchScreen.storyboard */; };
 		08CDC5C3267ACB700073176F /* RekapitulasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDC5C2267ACB700073176F /* RekapitulasiViewController.swift */; };
@@ -48,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0820FD212681BA84006DA8DD /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0853705C2678985400D30D8C /* BoBNolepAssique.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoBNolepAssique.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0853705F2678985400D30D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		085370632678985400D30D8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				08CDC5CF267AD1C30073176F /* FirstCheck.swift */,
+				0820FD212681BA84006DA8DD /* UIColorExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -306,7 +308,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				08FF35C52680A0C90006673A /* Sisa+CoreDataProperties.swift in Sources */,
-				0853706A2678985400D30D8C /* BoBNolepAssique.xcdatamodeld in Sources */,
 				08FF35CA2680A0C90006673A /* Investasi+CoreDataClass.swift in Sources */,
 				08CDC5E2267AD6510073176F /* PerkiraanBiayaViewController.swift in Sources */,
 				08CDC5D8267AD5410073176F /* KebutuhanViewController.swift in Sources */,
@@ -320,6 +321,7 @@
 				08FF35C02680A0C90006673A /* General+CoreDataClass.swift in Sources */,
 				08CDC5C5267ACC050073176F /* PengaturanViewController.swift in Sources */,
 				08FF35CB2680A0C90006673A /* Investasi+CoreDataProperties.swift in Sources */,
+				0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */,
 				08FF35C22680A0C90006673A /* Pendapatan+CoreDataClass.swift in Sources */,
 				08FF35C62680A0C90006673A /* Keinginan+CoreDataClass.swift in Sources */,
 				08FF35C72680A0C90006673A /* Keinginan+CoreDataProperties.swift in Sources */,
