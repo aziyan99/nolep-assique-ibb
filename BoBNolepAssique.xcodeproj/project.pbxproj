@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820FD212681BA84006DA8DD /* UIColorExtension.swift */; };
+		0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820FD232681ECBB006DA8DD /* AddKebutuhanViewController.swift */; };
 		085370602678985400D30D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0853705F2678985400D30D8C /* AppDelegate.swift */; };
 		085370642678985400D30D8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085370632678985400D30D8C /* ViewController.swift */; };
 		085370672678985400D30D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085370652678985400D30D8C /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		0820FD212681BA84006DA8DD /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		0820FD232681ECBB006DA8DD /* AddKebutuhanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKebutuhanViewController.swift; sourceTree = "<group>"; };
 		0853705C2678985400D30D8C /* BoBNolepAssique.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoBNolepAssique.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0853705F2678985400D30D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		085370632678985400D30D8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0820FD252681ED86006DA8DD /* Kebutuhan */ = {
+			isa = PBXGroup;
+			children = (
+				08CDC5D7267AD5410073176F /* KebutuhanViewController.swift */,
+				0820FD232681ECBB006DA8DD /* AddKebutuhanViewController.swift */,
+			);
+			path = Kebutuhan;
+			sourceTree = "<group>";
+		};
 		085370532678985400D30D8C = {
 			isa = PBXGroup;
 			children = (
@@ -210,8 +221,8 @@
 		08CDC5E9267AD7A30073176F /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				0820FD252681ED86006DA8DD /* Kebutuhan */,
 				08CDC5D3267AD5170073176F /* PendapatanViewController.swift */,
-				08CDC5D7267AD5410073176F /* KebutuhanViewController.swift */,
 				08CDC5DB267AD59A0073176F /* InvestasiViewController.swift */,
 				08CDC5DD267AD6000073176F /* DanaImpulsifViewController.swift */,
 				08CDC5E1267AD6510073176F /* PerkiraanBiayaViewController.swift */,
@@ -319,6 +330,7 @@
 				08CDC5DE267AD6000073176F /* DanaImpulsifViewController.swift in Sources */,
 				08FF35C42680A0C90006673A /* Sisa+CoreDataClass.swift in Sources */,
 				08FF35C02680A0C90006673A /* General+CoreDataClass.swift in Sources */,
+				0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */,
 				08CDC5C5267ACC050073176F /* PengaturanViewController.swift in Sources */,
 				08FF35CB2680A0C90006673A /* Investasi+CoreDataProperties.swift in Sources */,
 				0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */,
