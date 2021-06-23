@@ -17,12 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbF-HF-2d6">
-                                <rect key="frame" x="16" y="703" width="358" height="50"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <rect key="frame" x="16" y="726" width="358" height="50"/>
+                                <color key="backgroundColor" red="0.42483299969999999" green="0.71325653789999999" blue="0.71007573599999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ipe-50-l1E"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="didTapSelanjutnyaBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nVU-Ze-eEP"/>
                                 </connections>
@@ -33,10 +36,16 @@
                         <constraints>
                             <constraint firstItem="JbF-HF-2d6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="0qB-OQ-qZt"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JbF-HF-2d6" secondAttribute="trailing" constant="16" id="Boy-qw-cr7"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="JbF-HF-2d6" secondAttribute="bottom" constant="57" id="rcp-5c-GY7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="JbF-HF-2d6" secondAttribute="bottom" constant="34" id="rcp-5c-GY7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rP2-3D-jzu"/>
+                    <navigationItem key="navigationItem" id="rP2-3D-jzu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aKg-nY-ZxL">
+                            <connections>
+                                <segue destination="6eD-sT-CaG" kind="presentation" id="bsJ-vj-g3C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnSelanjutnya" destination="JbF-HF-2d6" id="zd3-OE-tiD"/>
                     </connections>
@@ -44,6 +53,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="120.53571428571428"/>
+        </scene>
+        <!--Add Investasi View Controller-->
+        <scene sceneID="N7V-fE-EJw">
+            <objects>
+                <viewController id="6eD-sT-CaG" customClass="AddInvestasiViewController" customModule="BoBNolepAssique" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rMO-Pc-glU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nN2-FF-ig4">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                                <items>
+                                    <navigationItem title="Tambah Investasi" id="TvH-QA-Pb6">
+                                        <barButtonItem key="leftBarButtonItem" title="Tutup" id="Az5-aM-BiH">
+                                            <connections>
+                                                <action selector="didTapTutupBtn:" destination="6eD-sT-CaG" id="QHi-o0-IeR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Selesai" id="doj-LE-0yQ"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QA2-Zl-3QH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nN2-FF-ig4" firstAttribute="top" secondItem="QA2-Zl-3QH" secondAttribute="top" id="K4L-YD-eeD"/>
+                            <constraint firstItem="nN2-FF-ig4" firstAttribute="leading" secondItem="rMO-Pc-glU" secondAttribute="leading" id="mz2-7c-S4F"/>
+                            <constraint firstItem="QA2-Zl-3QH" firstAttribute="trailing" secondItem="nN2-FF-ig4" secondAttribute="trailing" id="oEi-ak-3AR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tjo-z0-x0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965" y="120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dWO-Y6-yA7">
@@ -67,9 +111,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
