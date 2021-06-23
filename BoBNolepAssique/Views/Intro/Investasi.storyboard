@@ -230,6 +230,9 @@
                             <constraint firstItem="nN2-FF-ig4" firstAttribute="top" secondItem="QA2-Zl-3QH" secondAttribute="top" id="K4L-YD-eeD"/>
                             <constraint firstItem="Tur-uT-Two" firstAttribute="leading" secondItem="QA2-Zl-3QH" secondAttribute="leading" id="Kq5-6s-lck"/>
                             <constraint firstItem="Tur-uT-Two" firstAttribute="top" secondItem="nN2-FF-ig4" secondAttribute="bottom" constant="20" id="LZn-WR-J9c"/>
+                            <constraint firstItem="nN2-FF-ig4" firstAttribute="top" secondItem="QA2-Zl-3QH" secondAttribute="top" id="cv5-6L-dBd"/>
+                            <constraint firstItem="nN2-FF-ig4" firstAttribute="trailing" secondItem="QA2-Zl-3QH" secondAttribute="trailing" id="d3w-lB-8KT"/>
+                            <constraint firstItem="nN2-FF-ig4" firstAttribute="leading" secondItem="QA2-Zl-3QH" secondAttribute="leading" id="gWa-0b-bnH"/>
                             <constraint firstItem="nN2-FF-ig4" firstAttribute="leading" secondItem="rMO-Pc-glU" secondAttribute="leading" id="mz2-7c-S4F"/>
                             <constraint firstItem="QA2-Zl-3QH" firstAttribute="trailing" secondItem="nN2-FF-ig4" secondAttribute="trailing" id="oEi-ak-3AR"/>
                         </constraints>
