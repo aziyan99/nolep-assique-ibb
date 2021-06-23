@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08062034268316D0006E19CB /* Investasi+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062026268316D0006E19CB /* Investasi+CoreDataClass.swift */; };
+		08062035268316D0006E19CB /* Investasi+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062027268316D0006E19CB /* Investasi+CoreDataProperties.swift */; };
+		08062036268316D0006E19CB /* Sisa+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062028268316D0006E19CB /* Sisa+CoreDataClass.swift */; };
+		08062037268316D0006E19CB /* Sisa+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062029268316D0006E19CB /* Sisa+CoreDataProperties.swift */; };
+		08062038268316D0006E19CB /* Kebutuhan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202A268316D0006E19CB /* Kebutuhan+CoreDataClass.swift */; };
+		08062039268316D0006E19CB /* Kebutuhan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202B268316D0006E19CB /* Kebutuhan+CoreDataProperties.swift */; };
+		0806203A268316D0006E19CB /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202C268316D0006E19CB /* History+CoreDataClass.swift */; };
+		0806203B268316D0006E19CB /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202D268316D0006E19CB /* History+CoreDataProperties.swift */; };
+		0806203C268316D0006E19CB /* General+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202E268316D0006E19CB /* General+CoreDataClass.swift */; };
+		0806203D268316D0006E19CB /* General+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202F268316D0006E19CB /* General+CoreDataProperties.swift */; };
+		0806203E268316D0006E19CB /* Pendapatan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062030268316D0006E19CB /* Pendapatan+CoreDataClass.swift */; };
+		0806203F268316D0006E19CB /* Pendapatan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062031268316D0006E19CB /* Pendapatan+CoreDataProperties.swift */; };
+		08062040268316D0006E19CB /* Keinginan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062032268316D0006E19CB /* Keinginan+CoreDataClass.swift */; };
+		08062041268316D0006E19CB /* Keinginan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062033268316D0006E19CB /* Keinginan+CoreDataProperties.swift */; };
 		0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820FD212681BA84006DA8DD /* UIColorExtension.swift */; };
 		0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820FD232681ECBB006DA8DD /* AddKebutuhanViewController.swift */; };
 		085370602678985400D30D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0853705F2678985400D30D8C /* AppDelegate.swift */; };
@@ -31,24 +45,24 @@
 		08CDC5EC267AE02A0073176F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDC5EB267AE02A0073176F /* SceneDelegate.swift */; };
 		08F91CD02679F570008BC4DE /* Rekapitulasi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F91CCF2679F570008BC4DE /* Rekapitulasi.storyboard */; };
 		08F91CD22679F588008BC4DE /* Pengaturan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F91CD12679F588008BC4DE /* Pengaturan.storyboard */; };
-		08FF35C02680A0C90006673A /* General+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35B22680A0C80006673A /* General+CoreDataClass.swift */; };
-		08FF35C12680A0C90006673A /* General+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35B32680A0C80006673A /* General+CoreDataProperties.swift */; };
-		08FF35C22680A0C90006673A /* Pendapatan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35B42680A0C80006673A /* Pendapatan+CoreDataClass.swift */; };
-		08FF35C32680A0C90006673A /* Pendapatan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35B52680A0C80006673A /* Pendapatan+CoreDataProperties.swift */; };
-		08FF35C42680A0C90006673A /* Sisa+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35B62680A0C90006673A /* Sisa+CoreDataClass.swift */; };
-		08FF35C52680A0C90006673A /* Sisa+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35B72680A0C90006673A /* Sisa+CoreDataProperties.swift */; };
-		08FF35C62680A0C90006673A /* Keinginan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35B82680A0C90006673A /* Keinginan+CoreDataClass.swift */; };
-		08FF35C72680A0C90006673A /* Keinginan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35B92680A0C90006673A /* Keinginan+CoreDataProperties.swift */; };
-		08FF35C82680A0C90006673A /* Kebutuhan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35BA2680A0C90006673A /* Kebutuhan+CoreDataClass.swift */; };
-		08FF35C92680A0C90006673A /* Kebutuhan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35BB2680A0C90006673A /* Kebutuhan+CoreDataProperties.swift */; };
-		08FF35CA2680A0C90006673A /* Investasi+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35BC2680A0C90006673A /* Investasi+CoreDataClass.swift */; };
-		08FF35CB2680A0C90006673A /* Investasi+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35BD2680A0C90006673A /* Investasi+CoreDataProperties.swift */; };
-		08FF35CC2680A0C90006673A /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35BE2680A0C90006673A /* History+CoreDataClass.swift */; };
-		08FF35CD2680A0C90006673A /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF35BF2680A0C90006673A /* History+CoreDataProperties.swift */; };
 		905F3B3B2679F2AD008B1A84 /* Keinginan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905F3B3A2679F2AD008B1A84 /* Keinginan.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08062026268316D0006E19CB /* Investasi+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investasi+CoreDataClass.swift"; sourceTree = "<group>"; };
+		08062027268316D0006E19CB /* Investasi+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investasi+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		08062028268316D0006E19CB /* Sisa+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataClass.swift"; sourceTree = "<group>"; };
+		08062029268316D0006E19CB /* Sisa+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0806202A268316D0006E19CB /* Kebutuhan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kebutuhan+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0806202B268316D0006E19CB /* Kebutuhan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kebutuhan+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0806202C268316D0006E19CB /* History+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0806202D268316D0006E19CB /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0806202E268316D0006E19CB /* General+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "General+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0806202F268316D0006E19CB /* General+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "General+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		08062030268316D0006E19CB /* Pendapatan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataClass.swift"; sourceTree = "<group>"; };
+		08062031268316D0006E19CB /* Pendapatan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		08062032268316D0006E19CB /* Keinginan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keinginan+CoreDataClass.swift"; sourceTree = "<group>"; };
+		08062033268316D0006E19CB /* Keinginan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keinginan+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0820FD212681BA84006DA8DD /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0820FD232681ECBB006DA8DD /* AddKebutuhanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKebutuhanViewController.swift; sourceTree = "<group>"; };
 		0853705C2678985400D30D8C /* BoBNolepAssique.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoBNolepAssique.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,20 +90,6 @@
 		08CDC5EB267AE02A0073176F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		08F91CCF2679F570008BC4DE /* Rekapitulasi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rekapitulasi.storyboard; sourceTree = "<group>"; };
 		08F91CD12679F588008BC4DE /* Pengaturan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pengaturan.storyboard; sourceTree = "<group>"; };
-		08FF35B22680A0C80006673A /* General+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "General+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35B32680A0C80006673A /* General+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "General+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35B42680A0C80006673A /* Pendapatan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35B52680A0C80006673A /* Pendapatan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35B62680A0C90006673A /* Sisa+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35B72680A0C90006673A /* Sisa+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35B82680A0C90006673A /* Keinginan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keinginan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35B92680A0C90006673A /* Keinginan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keinginan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35BA2680A0C90006673A /* Kebutuhan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kebutuhan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35BB2680A0C90006673A /* Kebutuhan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kebutuhan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35BC2680A0C90006673A /* Investasi+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investasi+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35BD2680A0C90006673A /* Investasi+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investasi+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35BE2680A0C90006673A /* History+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		08FF35BF2680A0C90006673A /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		905F3B3A2679F2AD008B1A84 /* Keinginan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keinginan.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +116,20 @@
 		085370532678985400D30D8C = {
 			isa = PBXGroup;
 			children = (
+				08062026268316D0006E19CB /* Investasi+CoreDataClass.swift */,
+				08062027268316D0006E19CB /* Investasi+CoreDataProperties.swift */,
+				08062028268316D0006E19CB /* Sisa+CoreDataClass.swift */,
+				08062029268316D0006E19CB /* Sisa+CoreDataProperties.swift */,
+				0806202A268316D0006E19CB /* Kebutuhan+CoreDataClass.swift */,
+				0806202B268316D0006E19CB /* Kebutuhan+CoreDataProperties.swift */,
+				0806202C268316D0006E19CB /* History+CoreDataClass.swift */,
+				0806202D268316D0006E19CB /* History+CoreDataProperties.swift */,
+				0806202E268316D0006E19CB /* General+CoreDataClass.swift */,
+				0806202F268316D0006E19CB /* General+CoreDataProperties.swift */,
+				08062030268316D0006E19CB /* Pendapatan+CoreDataClass.swift */,
+				08062031268316D0006E19CB /* Pendapatan+CoreDataProperties.swift */,
+				08062032268316D0006E19CB /* Keinginan+CoreDataClass.swift */,
+				08062033268316D0006E19CB /* Keinginan+CoreDataProperties.swift */,
 				0853705E2678985400D30D8C /* BoBNolepAssique */,
 				0853705D2678985400D30D8C /* Products */,
 			);
@@ -135,7 +149,6 @@
 				08CDC5E8267AD7950073176F /* Controllers */,
 				08CDC5E5267AD6FF0073176F /* Views */,
 				08CDC5CE267AD1AF0073176F /* Helpers */,
-				08CDC5CD267AD1370073176F /* CoreData */,
 				0853705F2678985400D30D8C /* AppDelegate.swift */,
 				08CDC5EB267AE02A0073176F /* SceneDelegate.swift */,
 				085370632678985400D30D8C /* ViewController.swift */,
@@ -145,27 +158,6 @@
 				085370682678985400D30D8C /* BoBNolepAssique.xcdatamodeld */,
 			);
 			path = BoBNolepAssique;
-			sourceTree = "<group>";
-		};
-		08CDC5CD267AD1370073176F /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				08FF35B22680A0C80006673A /* General+CoreDataClass.swift */,
-				08FF35B32680A0C80006673A /* General+CoreDataProperties.swift */,
-				08FF35B42680A0C80006673A /* Pendapatan+CoreDataClass.swift */,
-				08FF35B52680A0C80006673A /* Pendapatan+CoreDataProperties.swift */,
-				08FF35B62680A0C90006673A /* Sisa+CoreDataClass.swift */,
-				08FF35B72680A0C90006673A /* Sisa+CoreDataProperties.swift */,
-				08FF35B82680A0C90006673A /* Keinginan+CoreDataClass.swift */,
-				08FF35B92680A0C90006673A /* Keinginan+CoreDataProperties.swift */,
-				08FF35BA2680A0C90006673A /* Kebutuhan+CoreDataClass.swift */,
-				08FF35BB2680A0C90006673A /* Kebutuhan+CoreDataProperties.swift */,
-				08FF35BC2680A0C90006673A /* Investasi+CoreDataClass.swift */,
-				08FF35BD2680A0C90006673A /* Investasi+CoreDataProperties.swift */,
-				08FF35BE2680A0C90006673A /* History+CoreDataClass.swift */,
-				08FF35BF2680A0C90006673A /* History+CoreDataProperties.swift */,
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		08CDC5CE267AD1AF0073176F /* Helpers */ = {
@@ -318,33 +310,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08FF35C52680A0C90006673A /* Sisa+CoreDataProperties.swift in Sources */,
-				08FF35CA2680A0C90006673A /* Investasi+CoreDataClass.swift in Sources */,
 				08CDC5E2267AD6510073176F /* PerkiraanBiayaViewController.swift in Sources */,
+				08062036268316D0006E19CB /* Sisa+CoreDataClass.swift in Sources */,
 				08CDC5D8267AD5410073176F /* KebutuhanViewController.swift in Sources */,
-				08FF35CD2680A0C90006673A /* History+CoreDataProperties.swift in Sources */,
+				08062039268316D0006E19CB /* Kebutuhan+CoreDataProperties.swift in Sources */,
+				08062034268316D0006E19CB /* Investasi+CoreDataClass.swift in Sources */,
+				08062038268316D0006E19CB /* Kebutuhan+CoreDataClass.swift in Sources */,
 				08CDC5D4267AD5170073176F /* PendapatanViewController.swift in Sources */,
-				08FF35C12680A0C90006673A /* General+CoreDataProperties.swift in Sources */,
 				08CDC5EC267AE02A0073176F /* SceneDelegate.swift in Sources */,
-				08FF35CC2680A0C90006673A /* History+CoreDataClass.swift in Sources */,
+				0806203E268316D0006E19CB /* Pendapatan+CoreDataClass.swift in Sources */,
 				08CDC5DE267AD6000073176F /* DanaImpulsifViewController.swift in Sources */,
-				08FF35C42680A0C90006673A /* Sisa+CoreDataClass.swift in Sources */,
-				08FF35C02680A0C90006673A /* General+CoreDataClass.swift in Sources */,
+				08062035268316D0006E19CB /* Investasi+CoreDataProperties.swift in Sources */,
+				0806203A268316D0006E19CB /* History+CoreDataClass.swift in Sources */,
 				0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */,
+				0806203B268316D0006E19CB /* History+CoreDataProperties.swift in Sources */,
+				0806203C268316D0006E19CB /* General+CoreDataClass.swift in Sources */,
+				08062037268316D0006E19CB /* Sisa+CoreDataProperties.swift in Sources */,
 				08CDC5C5267ACC050073176F /* PengaturanViewController.swift in Sources */,
-				08FF35CB2680A0C90006673A /* Investasi+CoreDataProperties.swift in Sources */,
+				0806203D268316D0006E19CB /* General+CoreDataProperties.swift in Sources */,
 				0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */,
-				08FF35C22680A0C90006673A /* Pendapatan+CoreDataClass.swift in Sources */,
-				08FF35C62680A0C90006673A /* Keinginan+CoreDataClass.swift in Sources */,
-				08FF35C72680A0C90006673A /* Keinginan+CoreDataProperties.swift in Sources */,
+				0806203F268316D0006E19CB /* Pendapatan+CoreDataProperties.swift in Sources */,
+				08062041268316D0006E19CB /* Keinginan+CoreDataProperties.swift in Sources */,
+				08062040268316D0006E19CB /* Keinginan+CoreDataClass.swift in Sources */,
 				085370642678985400D30D8C /* ViewController.swift in Sources */,
 				08CDC5C3267ACB700073176F /* RekapitulasiViewController.swift in Sources */,
 				08CDC5C7267ACC3F0073176F /* KeinginanViewController.swift in Sources */,
-				08FF35C92680A0C90006673A /* Kebutuhan+CoreDataProperties.swift in Sources */,
-				08FF35C82680A0C90006673A /* Kebutuhan+CoreDataClass.swift in Sources */,
 				085370602678985400D30D8C /* AppDelegate.swift in Sources */,
 				08CDC5DC267AD59A0073176F /* InvestasiViewController.swift in Sources */,
-				08FF35C32680A0C90006673A /* Pendapatan+CoreDataProperties.swift in Sources */,
 				08CDC5D0267AD1C30073176F /* FirstCheck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
