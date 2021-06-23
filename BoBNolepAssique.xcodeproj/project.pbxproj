@@ -7,20 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08062034268316D0006E19CB /* Investasi+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062026268316D0006E19CB /* Investasi+CoreDataClass.swift */; };
-		08062035268316D0006E19CB /* Investasi+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062027268316D0006E19CB /* Investasi+CoreDataProperties.swift */; };
-		08062036268316D0006E19CB /* Sisa+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062028268316D0006E19CB /* Sisa+CoreDataClass.swift */; };
-		08062037268316D0006E19CB /* Sisa+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062029268316D0006E19CB /* Sisa+CoreDataProperties.swift */; };
-		08062038268316D0006E19CB /* Kebutuhan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202A268316D0006E19CB /* Kebutuhan+CoreDataClass.swift */; };
-		08062039268316D0006E19CB /* Kebutuhan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202B268316D0006E19CB /* Kebutuhan+CoreDataProperties.swift */; };
-		0806203A268316D0006E19CB /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202C268316D0006E19CB /* History+CoreDataClass.swift */; };
-		0806203B268316D0006E19CB /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202D268316D0006E19CB /* History+CoreDataProperties.swift */; };
-		0806203C268316D0006E19CB /* General+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202E268316D0006E19CB /* General+CoreDataClass.swift */; };
-		0806203D268316D0006E19CB /* General+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806202F268316D0006E19CB /* General+CoreDataProperties.swift */; };
-		0806203E268316D0006E19CB /* Pendapatan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062030268316D0006E19CB /* Pendapatan+CoreDataClass.swift */; };
-		0806203F268316D0006E19CB /* Pendapatan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062031268316D0006E19CB /* Pendapatan+CoreDataProperties.swift */; };
-		08062040268316D0006E19CB /* Keinginan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062032268316D0006E19CB /* Keinginan+CoreDataClass.swift */; };
-		08062041268316D0006E19CB /* Keinginan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08062033268316D0006E19CB /* Keinginan+CoreDataProperties.swift */; };
 		0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820FD212681BA84006DA8DD /* UIColorExtension.swift */; };
 		0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820FD232681ECBB006DA8DD /* AddKebutuhanViewController.swift */; };
 		085370602678985400D30D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0853705F2678985400D30D8C /* AppDelegate.swift */; };
@@ -49,20 +35,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08062026268316D0006E19CB /* Investasi+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investasi+CoreDataClass.swift"; sourceTree = "<group>"; };
-		08062027268316D0006E19CB /* Investasi+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investasi+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		08062028268316D0006E19CB /* Sisa+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataClass.swift"; sourceTree = "<group>"; };
-		08062029268316D0006E19CB /* Sisa+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0806202A268316D0006E19CB /* Kebutuhan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kebutuhan+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0806202B268316D0006E19CB /* Kebutuhan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kebutuhan+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0806202C268316D0006E19CB /* History+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0806202D268316D0006E19CB /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0806202E268316D0006E19CB /* General+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "General+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0806202F268316D0006E19CB /* General+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "General+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		08062030268316D0006E19CB /* Pendapatan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataClass.swift"; sourceTree = "<group>"; };
-		08062031268316D0006E19CB /* Pendapatan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		08062032268316D0006E19CB /* Keinginan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keinginan+CoreDataClass.swift"; sourceTree = "<group>"; };
-		08062033268316D0006E19CB /* Keinginan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keinginan+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0820FD212681BA84006DA8DD /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0820FD232681ECBB006DA8DD /* AddKebutuhanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKebutuhanViewController.swift; sourceTree = "<group>"; };
 		0853705C2678985400D30D8C /* BoBNolepAssique.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoBNolepAssique.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,20 +88,6 @@
 		085370532678985400D30D8C = {
 			isa = PBXGroup;
 			children = (
-				08062026268316D0006E19CB /* Investasi+CoreDataClass.swift */,
-				08062027268316D0006E19CB /* Investasi+CoreDataProperties.swift */,
-				08062028268316D0006E19CB /* Sisa+CoreDataClass.swift */,
-				08062029268316D0006E19CB /* Sisa+CoreDataProperties.swift */,
-				0806202A268316D0006E19CB /* Kebutuhan+CoreDataClass.swift */,
-				0806202B268316D0006E19CB /* Kebutuhan+CoreDataProperties.swift */,
-				0806202C268316D0006E19CB /* History+CoreDataClass.swift */,
-				0806202D268316D0006E19CB /* History+CoreDataProperties.swift */,
-				0806202E268316D0006E19CB /* General+CoreDataClass.swift */,
-				0806202F268316D0006E19CB /* General+CoreDataProperties.swift */,
-				08062030268316D0006E19CB /* Pendapatan+CoreDataClass.swift */,
-				08062031268316D0006E19CB /* Pendapatan+CoreDataProperties.swift */,
-				08062032268316D0006E19CB /* Keinginan+CoreDataClass.swift */,
-				08062033268316D0006E19CB /* Keinginan+CoreDataProperties.swift */,
 				0853705E2678985400D30D8C /* BoBNolepAssique */,
 				0853705D2678985400D30D8C /* Products */,
 			);
@@ -311,27 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				08CDC5E2267AD6510073176F /* PerkiraanBiayaViewController.swift in Sources */,
-				08062036268316D0006E19CB /* Sisa+CoreDataClass.swift in Sources */,
 				08CDC5D8267AD5410073176F /* KebutuhanViewController.swift in Sources */,
-				08062039268316D0006E19CB /* Kebutuhan+CoreDataProperties.swift in Sources */,
-				08062034268316D0006E19CB /* Investasi+CoreDataClass.swift in Sources */,
-				08062038268316D0006E19CB /* Kebutuhan+CoreDataClass.swift in Sources */,
 				08CDC5D4267AD5170073176F /* PendapatanViewController.swift in Sources */,
 				08CDC5EC267AE02A0073176F /* SceneDelegate.swift in Sources */,
-				0806203E268316D0006E19CB /* Pendapatan+CoreDataClass.swift in Sources */,
 				08CDC5DE267AD6000073176F /* DanaImpulsifViewController.swift in Sources */,
-				08062035268316D0006E19CB /* Investasi+CoreDataProperties.swift in Sources */,
-				0806203A268316D0006E19CB /* History+CoreDataClass.swift in Sources */,
 				0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */,
-				0806203B268316D0006E19CB /* History+CoreDataProperties.swift in Sources */,
-				0806203C268316D0006E19CB /* General+CoreDataClass.swift in Sources */,
-				08062037268316D0006E19CB /* Sisa+CoreDataProperties.swift in Sources */,
 				08CDC5C5267ACC050073176F /* PengaturanViewController.swift in Sources */,
-				0806203D268316D0006E19CB /* General+CoreDataProperties.swift in Sources */,
 				0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */,
-				0806203F268316D0006E19CB /* Pendapatan+CoreDataProperties.swift in Sources */,
-				08062041268316D0006E19CB /* Keinginan+CoreDataProperties.swift in Sources */,
-				08062040268316D0006E19CB /* Keinginan+CoreDataClass.swift in Sources */,
 				085370642678985400D30D8C /* ViewController.swift in Sources */,
 				08CDC5C3267ACB700073176F /* RekapitulasiViewController.swift in Sources */,
 				08CDC5C7267ACC3F0073176F /* KeinginanViewController.swift in Sources */,
