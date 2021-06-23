@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="FirstCheck" representedClassName="FirstCheck" syncable="YES">
-        <attribute name="is_first" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    <entity name="General" representedClassName="General" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="is_send_notif" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="History" representedClassName="History" syncable="YES">
+        <attribute name="bulan" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="is_active" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="tahun" optional="YES" attributeType="String"/>
+        <attribute name="total_investasi" optional="YES" attributeType="String"/>
+        <attribute name="total_kebutuhan" optional="YES" attributeType="String"/>
+        <attribute name="total_keinginan" optional="YES" attributeType="String"/>
+        <attribute name="total_keinginan_yg_dibeli" optional="YES" attributeType="String"/>
+        <attribute name="total_keinginan_yg_gagal_dibeli" optional="YES" attributeType="String"/>
+        <attribute name="total_pendapatan" optional="YES" attributeType="String"/>
+        <relationship name="keinginans" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Keinginan" inverseName="ofHistory" inverseEntity="Keinginan"/>
+    </entity>
+    <entity name="Investasi" representedClassName="Investasi" syncable="YES">
+        <attribute name="harga" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nama" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Kebutuhan" representedClassName="Kebutuhan" syncable="YES">
+        <attribute name="harga" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nama" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Keinginan" representedClassName="Keinginan" syncable="YES">
+        <attribute name="catatan" optional="YES" attributeType="String"/>
+        <attribute name="foto" optional="YES" attributeType="Binary"/>
+        <attribute name="harga" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="is_active" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="jumlah" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lokasi" optional="YES" attributeType="String"/>
+        <attribute name="nama" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="ofHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="History" inverseName="keinginans" inverseEntity="History"/>
+    </entity>
+    <entity name="Pendapatan" representedClassName="Pendapatan" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="total" optional="YES" attributeType="String"/>
+        <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="Sisa" representedClassName="Sisa" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="total" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="FirstCheck" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="General" positionX="0" positionY="81" width="128" height="59"/>
+        <element name="History" positionX="36" positionY="171" width="128" height="194"/>
+        <element name="Investasi" positionX="-36" positionY="45" width="128" height="89"/>
+        <element name="Kebutuhan" positionX="-54" positionY="18" width="128" height="89"/>
+        <element name="Keinginan" positionX="18" positionY="90" width="128" height="194"/>
+        <element name="Pendapatan" positionX="-63" positionY="-9" width="128" height="74"/>
+        <element name="Sisa" positionX="-18" positionY="72" width="128" height="59"/>
     </elements>
 </model>
