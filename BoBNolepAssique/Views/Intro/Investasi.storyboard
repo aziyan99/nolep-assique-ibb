@@ -239,6 +239,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomFormLabel" destination="Vg5-hn-KHm" id="ddF-jG-OCh"/>
+                        <outlet property="namaTextField" destination="eKf-7z-y1g" id="BAW-MM-wb6"/>
                         <outlet property="topFormLabel" destination="QHW-nl-I7a" id="IEY-Be-Tb7"/>
                     </connections>
                 </viewController>

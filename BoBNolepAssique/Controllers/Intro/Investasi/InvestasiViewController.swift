@@ -61,6 +61,8 @@ class InvestasiViewController: ViewController,
         cell.textLabel?.text = "\(dummyInvestasi[indexPath.row][0])"
         cell.detailTextLabel?.text = "\(dummyInvestasi[indexPath.row][1])"
         
+        cell.accessoryType = .disclosureIndicator
+        
         return cell
     }
     
@@ -70,6 +72,10 @@ class InvestasiViewController: ViewController,
     
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return "Ini adalah daftar perencanaan investasi kamu, seperti tabungan, ataupun pembelian emas yang akan jadi uang masa depan kamu nantinya."
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableViewInvestasi.deselectRow(at: indexPath, animated: true)
     }
     
 }
