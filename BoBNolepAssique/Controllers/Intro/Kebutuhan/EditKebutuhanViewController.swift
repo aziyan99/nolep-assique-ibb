@@ -1,36 +1,19 @@
 //
-//  AddKebutuhanViewController.swift
+//  EditKebutuhanViewController.swift
 //  BoBNolepAssique
 //
-//  Created by Raja Azian on 22/06/21.
+//  Created by Raja Azian on 25/06/21.
 //
 
 import UIKit
 
-struct SectionDetail {
-    let title: String
-    let options: [TableInputType]
-    let footer: String
-}
+class EditKebutuhanViewController: ViewController {
 
-enum TableInputType {
-    case switchCell(model: TableInputDetails)
-}
-struct TableInputDetails {
-    let title: String
-    let icon: UIImage?
-    let iconBackgrounColor: UIColor
-    var isOn: Bool
-    let handler: (() -> Void)
-}
-
-class AddKebutuhanViewController: ViewController {
-    
     var models = [SectionDetail]()
     
     let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
-        table.register(AddKebutuhanTableViewCell.self, forCellReuseIdentifier: AddKebutuhanTableViewCell.identifier)
+        table.register(EditKebutuhanTabelViewCell.self, forCellReuseIdentifier: EditKebutuhanTabelViewCell.identifier)
         return table
     }()
     
@@ -67,7 +50,7 @@ class AddKebutuhanViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Tambah Kebutuhan"
+        title = "Ubah Kebutuhan"
         setupNavbar()
         setupTable()
     }
@@ -75,10 +58,11 @@ class AddKebutuhanViewController: ViewController {
     @objc func didTapTutupBtn(){
         self.dismiss(animated: true, completion: nil)
     }
-    
+
 }
 
-extension AddKebutuhanViewController: UITableViewDelegate, UITableViewDataSource {
+
+extension EditKebutuhanViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return models.count
     }
@@ -101,13 +85,11 @@ extension AddKebutuhanViewController: UITableViewDelegate, UITableViewDataSource
         let model = models[indexPath.section].options[indexPath.row]
         switch model.self {
         case .switchCell(let model):
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: AddKebutuhanTableViewCell.identifier, for: indexPath) as? AddKebutuhanTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: EditKebutuhanTabelViewCell.identifier, for: indexPath) as? EditKebutuhanTabelViewCell else {
                 return UITableViewCell()
             }
             cell.configure(with: model)
             return cell
         }
     }
-    
-    
 }
