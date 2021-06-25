@@ -16,6 +16,7 @@ class DanaImpulsifViewController: ViewController {
     @IBOutlet weak var sisaBudgetValue: UILabel!
     @IBOutlet weak var totalPengeluaranLabel: UILabel!
     @IBOutlet weak var totalPengeluaranValue: UILabel!
+    @IBOutlet weak var bagIconLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -34,6 +35,12 @@ class DanaImpulsifViewController: ViewController {
         
         self.bottomDetailText.text = "Dana impulsif kamu masih kosong nih. Jika kamu ingin menambahkan detail perencanaan impulsive, kamu bisa menambahkannya di menu keinginan."
         self.bottomDetailText.numberOfLines = 0
+        
+        let bagIcon = NSTextAttachment()
+        bagIcon.image = UIImage(systemName: "bag", withConfiguration: UIImage.SymbolConfiguration(pointSize: 60.0))
+        
+        bagIconLabel.attributedText = NSAttributedString(attachment: bagIcon)
+        
     }
     
     @IBAction func didTapSelanjutnyaBtn(_ sender: Any) {

@@ -89,6 +89,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbS-ts-V2t">
+                                <rect key="frame" x="15" y="382" width="363" height="72"/>
+                                <color key="tintColor" red="0.35891607399999997" green="0.69714903829999997" blue="0.69442969560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="0.42483299969999999" green="0.71325653789999999" blue="0.71007573599999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,14 +105,18 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="O7f-hc-vUr" secondAttribute="trailing" constant="15" id="Idt-mf-YHa"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LXn-D3-BjM" secondAttribute="trailing" constant="20" id="Nno-Si-bfN"/>
                             <constraint firstItem="O7f-hc-vUr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="R5G-Qu-rzM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gbS-ts-V2t" secondAttribute="trailing" constant="12" id="Uzz-g1-eTZ"/>
                             <constraint firstItem="Afz-Tc-wpn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="VYs-Jo-6gP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Afz-Tc-wpn" secondAttribute="bottom" constant="34" id="eQA-cF-Ohb"/>
                             <constraint firstItem="Afz-Tc-wpn" firstAttribute="top" secondItem="O7f-hc-vUr" secondAttribute="bottom" constant="206" id="mRz-wW-Uxp"/>
+                            <constraint firstItem="O7f-hc-vUr" firstAttribute="top" secondItem="gbS-ts-V2t" secondAttribute="bottom" constant="51" id="pEK-6T-yoT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Afz-Tc-wpn" secondAttribute="trailing" constant="16" id="wN8-Pq-j5c"/>
+                            <constraint firstItem="gbS-ts-V2t" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="wi5-3D-eNo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2c7-yu-hIQ"/>
                     <connections>
+                        <outlet property="bagIconLabel" destination="gbS-ts-V2t" id="jm4-oX-EXk"/>
                         <outlet property="bottomDetailText" destination="O7f-hc-vUr" id="DPQ-Fo-Uf2"/>
                         <outlet property="btnSelanjutnya" destination="Afz-Tc-wpn" id="RZH-ps-CAR"/>
                         <outlet property="budgetContainer" destination="LXn-D3-BjM" id="sgn-ix-jvZ"/>
