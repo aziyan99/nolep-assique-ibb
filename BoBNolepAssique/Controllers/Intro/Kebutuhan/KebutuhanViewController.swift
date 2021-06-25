@@ -42,6 +42,8 @@ class KebutuhanViewController: ViewController,
         tableViewKebutuhan.dataSource = self
         tableViewKebutuhan.delegate = self
         
+        tableViewKebutuhan.backgroundColor = .systemGray6
+        
     }
     
     @IBAction func didTapSelanutnyaBtn(_ sender: Any) {

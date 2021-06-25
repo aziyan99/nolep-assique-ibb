@@ -26,6 +26,7 @@ class EditInvestasiTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(label)
         contentView.addSubview(textInputField)
+        
         contentView.clipsToBounds = true
         accessoryType = .none
     }

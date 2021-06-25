@@ -108,6 +108,4 @@ extension AddKebutuhanViewController: UITableViewDelegate, UITableViewDataSource
             return cell
         }
     }
-    
-    
 }

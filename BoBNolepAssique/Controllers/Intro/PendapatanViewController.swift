@@ -26,6 +26,14 @@ class PendapatanViewController: ViewController {
         pendapatanTextField.clearButtonMode = .always
         pendapatanTextField.clearButtonMode = .whileEditing
         
+        let GradientColor1 = UIColor(named: "GradientColor1")
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.backgroundColor = GradientColor1
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
     
     @IBAction func didTapSelanjutnyaBtn(_ sender: Any) {
