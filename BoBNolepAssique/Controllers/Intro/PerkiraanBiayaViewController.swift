@@ -7,9 +7,7 @@
 
 import UIKit
 
-class PerkiraanBiayaViewController: ViewController,
-                                    UITableViewDelegate,
-                                    UITableViewDataSource{
+class PerkiraanBiayaViewController: ViewController {
     
     final var window: UIWindow?
     @IBOutlet weak var btnSelesai: UIButton!
@@ -51,9 +49,29 @@ class PerkiraanBiayaViewController: ViewController,
     }
     
     @IBAction func didTapUlangiBtn(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        let optionMenu = UIAlertController(title: nil, message: "Mengulangi semua perencanaan?", preferredStyle: .actionSheet)
+        
+        let btnUlangi = UIAlertAction(title: "Ya, ulangi", style: .default, handler: { (_) in
+            self.navigationController?.popToRootViewController(animated: true)
+        })
+        
+        let btnBatal = UIAlertAction(title: "Tidak, batalkan", style: .destructive, handler: nil)
+        
+        let btnCancel = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
+        
+        optionMenu.addAction(btnUlangi)
+        optionMenu.addAction(btnBatal)
+        optionMenu.addAction(btnCancel)
+        
+        self.present(optionMenu, animated: true, completion: nil)
     }
     
+    
+    
+}
+
+extension PerkiraanBiayaViewController: UITableViewDelegate,
+                                        UITableViewDataSource{
     /**
      Table view
      */
@@ -74,6 +92,27 @@ class PerkiraanBiayaViewController: ViewController,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         perkiraanBiayaTableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.row == 0 {
+            //kebutuhan
+            let nextStoryboard = UIStoryboard(name: "Kebutuhan", bundle: nil)
+            let nextViewController = nextStoryboard.instantiateViewController(identifier: "KebutuhanViewController")
+            
+            show(nextViewController, sender: self)
+        }
+        else if indexPath.row == 1 {
+            //investasi
+            let nextStoryboard = UIStoryboard(name: "Investasi", bundle: nil)
+            let nextViewController = nextStoryboard.instantiateViewController(identifier: "InvestasiViewController")
+            
+            show(nextViewController, sender: self)
+        }else{
+            //impulsif
+            let nextStoryboard = UIStoryboard(name: "DanaImpulsif", bundle: nil)
+            let nextViewController = nextStoryboard.instantiateViewController(identifier: "DanaImpulsifViewController")
+            
+            show(nextViewController, sender: self)
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -83,5 +122,4 @@ class PerkiraanBiayaViewController: ViewController,
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return "Ini adalah total perkiraan biaya dari masing-masing akumulasi pembagian keuangan kamu, jangan takut untuk mengubahnya lagi jika menurutmu kurang tepat."
     }
-    
 }
