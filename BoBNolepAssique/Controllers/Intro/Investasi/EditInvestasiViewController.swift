@@ -1,19 +1,19 @@
 //
-//  AddInvestasiViewController.swift
+//  EditInvestasiViewController.swift
 //  BoBNolepAssique
 //
-//  Created by Raja Azian on 23/06/21.
+//  Created by Raja Azian on 25/06/21.
 //
 
 import UIKit
 
-class AddInvestasiViewController: ViewController {
-    
+class EditInvestasiViewController: ViewController {
+
     var models = [SectionDetail]()
     
     let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
-        table.register(AddInvestasiTableViewCell.self, forCellReuseIdentifier: AddInvestasiTableViewCell.identifier)
+        table.register(EditInvestasiTableViewCell.self, forCellReuseIdentifier: EditInvestasiTableViewCell.identifier)
         return table
     }()
     
@@ -50,7 +50,7 @@ class AddInvestasiViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Tambah Investasi"
+        title = "Ubah Investasi"
         setupNavbar()
         setupTable()
     }
@@ -58,10 +58,11 @@ class AddInvestasiViewController: ViewController {
     @objc func didTapTutupBtn(){
         self.dismiss(animated: true, completion: nil)
     }
+
 }
 
 
-extension AddInvestasiViewController: UITableViewDelegate, UITableViewDataSource {
+extension EditInvestasiViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return models.count
     }
@@ -84,7 +85,7 @@ extension AddInvestasiViewController: UITableViewDelegate, UITableViewDataSource
         let model = models[indexPath.section].options[indexPath.row]
         switch model.self {
         case .switchCell(let model):
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: AddInvestasiTableViewCell.identifier, for: indexPath) as? AddInvestasiTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: EditInvestasiTableViewCell.identifier, for: indexPath) as? EditInvestasiTableViewCell else {
                 return UITableViewCell()
             }
             cell.configure(with: model)
