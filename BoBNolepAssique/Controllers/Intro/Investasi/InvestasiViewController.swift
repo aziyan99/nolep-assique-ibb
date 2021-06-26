@@ -39,6 +39,8 @@ class InvestasiViewController: ViewController,
         
         self.tableViewInvestasi.delegate = self
         self.tableViewInvestasi.dataSource = self
+        
+        self.tableViewInvestasi.backgroundColor = .systemGray6
     }
     
     @IBAction func didTapSelanjutnyaBtn(_ sender: Any) {

@@ -39,6 +39,8 @@ class PerkiraanBiayaViewController: ViewController {
         self.perkiraanBiayaTableView.dataSource = self
         self.perkiraanBiayaTableView.delegate = self
         
+        self.perkiraanBiayaTableView.backgroundColor = .systemGray6
+        
     }
 
     @IBAction func didTapSelesaiBtn(_ sender: Any) {
