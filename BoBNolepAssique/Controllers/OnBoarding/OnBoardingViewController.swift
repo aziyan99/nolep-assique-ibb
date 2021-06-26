@@ -21,6 +21,8 @@ class OnBoardingViewController: UIViewController {
         
         self.btnSelanjutnya.layer.cornerRadius = 8
         self.btnSelanjutnya.setTitle("Selanjutnya", for: UIControl.State.normal)
+        
+        self.topLogoImg.image = UIImage(named: <#T##String#>)
     }
     
     @IBAction func SelanjutnyaButton(_ sender: Any) {
