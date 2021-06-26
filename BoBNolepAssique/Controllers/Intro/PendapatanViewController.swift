@@ -34,6 +34,7 @@ class PendapatanViewController: ViewController {
         navBarAppearance.backgroundColor = GradientColor1
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     @IBAction func didTapSelanjutnyaBtn(_ sender: Any) {
