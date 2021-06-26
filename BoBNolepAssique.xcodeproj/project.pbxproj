@@ -9,11 +9,20 @@
 /* Begin PBXBuildFile section */
 		0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820FD212681BA84006DA8DD /* UIColorExtension.swift */; };
 		0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0820FD232681ECBB006DA8DD /* AddKebutuhanViewController.swift */; };
+		0830DAB92685DDB00045211F /* SecondOnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830DAB82685DDB00045211F /* SecondOnBoardingViewController.swift */; };
+		0830DABD2685DF2A0045211F /* SecondOnboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0830DABC2685DF2A0045211F /* SecondOnboarding.storyboard */; };
 		085370602678985400D30D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0853705F2678985400D30D8C /* AppDelegate.swift */; };
 		085370642678985400D30D8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085370632678985400D30D8C /* ViewController.swift */; };
 		085370672678985400D30D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085370652678985400D30D8C /* Main.storyboard */; };
 		0853706C2678985500D30D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0853706B2678985500D30D8C /* Assets.xcassets */; };
 		0853706F2678985500D30D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0853706D2678985500D30D8C /* LaunchScreen.storyboard */; };
+		08B4A5C726831ED300F5EFD1 /* AddInvestasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4A5C626831ED300F5EFD1 /* AddInvestasiViewController.swift */; };
+		08C2BF6426856DCD005A9B26 /* AddKebutuhanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF6326856DCD005A9B26 /* AddKebutuhanTableViewCell.swift */; };
+		08C2BF6726857455005A9B26 /* EditKebutuhanTabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF6626857455005A9B26 /* EditKebutuhanTabelViewCell.swift */; };
+		08C2BF69268574C3005A9B26 /* EditKebutuhanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF68268574C3005A9B26 /* EditKebutuhanViewController.swift */; };
+		08C2BF6C268584FF005A9B26 /* AddInvestasiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF6B268584FF005A9B26 /* AddInvestasiTableViewCell.swift */; };
+		08C2BF6E26858516005A9B26 /* EditInvestasiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF6D26858516005A9B26 /* EditInvestasiTableViewCell.swift */; };
+		08C2BF7026858586005A9B26 /* EditInvestasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF6F26858586005A9B26 /* EditInvestasiViewController.swift */; };
 		08CDC5C3267ACB700073176F /* RekapitulasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDC5C2267ACB700073176F /* RekapitulasiViewController.swift */; };
 		08CDC5C5267ACC050073176F /* PengaturanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDC5C4267ACC050073176F /* PengaturanViewController.swift */; };
 		08CDC5C7267ACC3F0073176F /* KeinginanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDC5C6267ACC3F0073176F /* KeinginanViewController.swift */; };
@@ -39,6 +48,8 @@
 /* Begin PBXFileReference section */
 		0820FD212681BA84006DA8DD /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0820FD232681ECBB006DA8DD /* AddKebutuhanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKebutuhanViewController.swift; sourceTree = "<group>"; };
+		0830DAB82685DDB00045211F /* SecondOnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnBoardingViewController.swift; sourceTree = "<group>"; };
+		0830DABC2685DF2A0045211F /* SecondOnboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondOnboarding.storyboard; sourceTree = "<group>"; };
 		0853705C2678985400D30D8C /* BoBNolepAssique.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoBNolepAssique.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0853705F2678985400D30D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		085370632678985400D30D8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,13 @@
 		0853706B2678985500D30D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0853706E2678985500D30D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		085370702678985500D30D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08B4A5C626831ED300F5EFD1 /* AddInvestasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInvestasiViewController.swift; sourceTree = "<group>"; };
+		08C2BF6326856DCD005A9B26 /* AddKebutuhanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKebutuhanTableViewCell.swift; sourceTree = "<group>"; };
+		08C2BF6626857455005A9B26 /* EditKebutuhanTabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKebutuhanTabelViewCell.swift; sourceTree = "<group>"; };
+		08C2BF68268574C3005A9B26 /* EditKebutuhanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKebutuhanViewController.swift; sourceTree = "<group>"; };
+		08C2BF6B268584FF005A9B26 /* AddInvestasiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInvestasiTableViewCell.swift; sourceTree = "<group>"; };
+		08C2BF6D26858516005A9B26 /* EditInvestasiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInvestasiTableViewCell.swift; sourceTree = "<group>"; };
+		08C2BF6F26858586005A9B26 /* EditInvestasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInvestasiViewController.swift; sourceTree = "<group>"; };
 		08CDC5C2267ACB700073176F /* RekapitulasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekapitulasiViewController.swift; sourceTree = "<group>"; };
 		08CDC5C4267ACC050073176F /* PengaturanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PengaturanViewController.swift; sourceTree = "<group>"; };
 		08CDC5C6267ACC3F0073176F /* KeinginanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeinginanViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +103,7 @@
 			children = (
 				08CDC5D7267AD5410073176F /* KebutuhanViewController.swift */,
 				0820FD232681ECBB006DA8DD /* AddKebutuhanViewController.swift */,
+				08C2BF68268574C3005A9B26 /* EditKebutuhanViewController.swift */,
 			);
 			path = Kebutuhan;
 			sourceTree = "<group>";
@@ -120,6 +139,43 @@
 				085370682678985400D30D8C /* BoBNolepAssique.xcdatamodeld */,
 			);
 			path = BoBNolepAssique;
+			sourceTree = "<group>";
+		};
+		08B4A5C526831EB300F5EFD1 /* Investasi */ = {
+			isa = PBXGroup;
+			children = (
+				08CDC5DB267AD59A0073176F /* InvestasiViewController.swift */,
+				08B4A5C626831ED300F5EFD1 /* AddInvestasiViewController.swift */,
+				08C2BF6F26858586005A9B26 /* EditInvestasiViewController.swift */,
+			);
+			path = Investasi;
+			sourceTree = "<group>";
+		};
+		08C2BF6226856D8D005A9B26 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				08C2BF6A268584DA005A9B26 /* Investasi */,
+				08C2BF6526857422005A9B26 /* Kebutuhan */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		08C2BF6526857422005A9B26 /* Kebutuhan */ = {
+			isa = PBXGroup;
+			children = (
+				08C2BF6326856DCD005A9B26 /* AddKebutuhanTableViewCell.swift */,
+				08C2BF6626857455005A9B26 /* EditKebutuhanTabelViewCell.swift */,
+			);
+			path = Kebutuhan;
+			sourceTree = "<group>";
+		};
+		08C2BF6A268584DA005A9B26 /* Investasi */ = {
+			isa = PBXGroup;
+			children = (
+				08C2BF6B268584FF005A9B26 /* AddInvestasiTableViewCell.swift */,
+				08C2BF6D26858516005A9B26 /* EditInvestasiTableViewCell.swift */,
+			);
+			path = Investasi;
 			sourceTree = "<group>";
 		};
 		08CDC5CE267AD1AF0073176F /* Helpers */ = {
@@ -177,9 +233,10 @@
 		08CDC5E9267AD7A30073176F /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				08C2BF6226856D8D005A9B26 /* Cell */,
+				08B4A5C526831EB300F5EFD1 /* Investasi */,
 				0820FD252681ED86006DA8DD /* Kebutuhan */,
 				08CDC5D3267AD5170073176F /* PendapatanViewController.swift */,
-				08CDC5DB267AD59A0073176F /* InvestasiViewController.swift */,
 				08CDC5DD267AD6000073176F /* DanaImpulsifViewController.swift */,
 				08CDC5E1267AD6510073176F /* PerkiraanBiayaViewController.swift */,
 			);
@@ -200,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE03AED267B472E00A30BD4 /* OnBoarding.storyboard */,
+				0830DABC2685DF2A0045211F /* SecondOnboarding.storyboard */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -208,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE03AF0267B481700A30BD4 /* OnBoardingViewController.swift */,
+				0830DAB82685DDB00045211F /* SecondOnBoardingViewController.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -271,6 +330,7 @@
 			files = (
 				08CDC5D2267AD4AF0073176F /* Pendapatan.storyboard in Resources */,
 				08CDC5DA267AD58F0073176F /* Investasi.storyboard in Resources */,
+				0830DABD2685DF2A0045211F /* SecondOnboarding.storyboard in Resources */,
 				08F91CD22679F588008BC4DE /* Pengaturan.storyboard in Resources */,
 				08CDC5E4267AD6600073176F /* PerkiraanBiaya.storyboard in Resources */,
 				905F3B3B2679F2AD008B1A84 /* Keinginan.storyboard in Resources */,
@@ -291,9 +351,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0830DAB92685DDB00045211F /* SecondOnBoardingViewController.swift in Sources */,
 				08CDC5E2267AD6510073176F /* PerkiraanBiayaViewController.swift in Sources */,
+				08C2BF7026858586005A9B26 /* EditInvestasiViewController.swift in Sources */,
 				08CDC5D8267AD5410073176F /* KebutuhanViewController.swift in Sources */,
+				08B4A5C726831ED300F5EFD1 /* AddInvestasiViewController.swift in Sources */,
+				08C2BF6426856DCD005A9B26 /* AddKebutuhanTableViewCell.swift in Sources */,
 				08CDC5D4267AD5170073176F /* PendapatanViewController.swift in Sources */,
+				08C2BF69268574C3005A9B26 /* EditKebutuhanViewController.swift in Sources */,
 				08CDC5EC267AE02A0073176F /* SceneDelegate.swift in Sources */,
 				08CDC5DE267AD6000073176F /* DanaImpulsifViewController.swift in Sources */,
 				0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */,
@@ -303,6 +368,9 @@
 				08CDC5C3267ACB700073176F /* RekapitulasiViewController.swift in Sources */,
 				3FE03AF1267B481700A30BD4 /* OnBoardingViewController.swift in Sources */,
 				08CDC5C7267ACC3F0073176F /* KeinginanViewController.swift in Sources */,
+				08C2BF6726857455005A9B26 /* EditKebutuhanTabelViewCell.swift in Sources */,
+				08C2BF6E26858516005A9B26 /* EditInvestasiTableViewCell.swift in Sources */,
+				08C2BF6C268584FF005A9B26 /* AddInvestasiTableViewCell.swift in Sources */,
 				085370602678985400D30D8C /* AppDelegate.swift in Sources */,
 				08CDC5DC267AD59A0073176F /* InvestasiViewController.swift in Sources */,
 				08CDC5D0267AD1C30073176F /* FirstCheck.swift in Sources */,

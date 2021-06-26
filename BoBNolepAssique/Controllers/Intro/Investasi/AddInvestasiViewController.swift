@@ -1,36 +1,19 @@
 //
-//  AddKebutuhanViewController.swift
+//  AddInvestasiViewController.swift
 //  BoBNolepAssique
 //
-//  Created by Raja Azian on 22/06/21.
+//  Created by Raja Azian on 23/06/21.
 //
 
 import UIKit
 
-struct SectionDetail {
-    let title: String
-    let options: [TableInputType]
-    let footer: String
-}
-
-enum TableInputType {
-    case switchCell(model: TableInputDetails)
-}
-struct TableInputDetails {
-    let title: String
-    let icon: UIImage?
-    let iconBackgrounColor: UIColor
-    var isOn: Bool
-    let handler: (() -> Void)
-}
-
-class AddKebutuhanViewController: ViewController {
+class AddInvestasiViewController: ViewController {
     
     var models = [SectionDetail]()
     
     let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
-        table.register(AddKebutuhanTableViewCell.self, forCellReuseIdentifier: AddKebutuhanTableViewCell.identifier)
+        table.register(AddInvestasiTableViewCell.self, forCellReuseIdentifier: AddInvestasiTableViewCell.identifier)
         return table
     }()
     
@@ -43,7 +26,7 @@ class AddKebutuhanViewController: ViewController {
     }
     
     func setupModel() {
-        models.append(SectionDetail(title: "DETAIL KEBUTUHAN", options: [
+        models.append(SectionDetail(title: "DETAIL INVESTASI", options: [
             .switchCell(model: TableInputDetails(title: "Nama", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
                 {
                 print("Nama")
@@ -56,7 +39,7 @@ class AddKebutuhanViewController: ViewController {
                 {
                 print("Harga")
             })
-        ], footer: "Masukkan detail data kebutuhan kamu dari nama kebutuhan, berapa banyak jumlahnya, dan total harganya."))
+        ], footer: "Masukkan detail data dari investasi kamu mulai dari nama investasi, kemudian berapa jumlahnya, beserta total harga investasi kamu."))
     }
     
     func setupNavbar() {
@@ -67,7 +50,7 @@ class AddKebutuhanViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Tambah Kebutuhan"
+        title = "Tambah Investasi"
         setupNavbar()
         setupTable()
     }
@@ -75,10 +58,10 @@ class AddKebutuhanViewController: ViewController {
     @objc func didTapTutupBtn(){
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
 
-extension AddKebutuhanViewController: UITableViewDelegate, UITableViewDataSource {
+
+extension AddInvestasiViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return models.count
     }
@@ -101,7 +84,7 @@ extension AddKebutuhanViewController: UITableViewDelegate, UITableViewDataSource
         let model = models[indexPath.section].options[indexPath.row]
         switch model.self {
         case .switchCell(let model):
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: AddKebutuhanTableViewCell.identifier, for: indexPath) as? AddKebutuhanTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: AddInvestasiTableViewCell.identifier, for: indexPath) as? AddInvestasiTableViewCell else {
                 return UITableViewCell()
             }
             cell.configure(with: model)

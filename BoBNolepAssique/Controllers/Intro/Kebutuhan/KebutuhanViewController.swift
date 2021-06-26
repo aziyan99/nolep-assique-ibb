@@ -42,6 +42,8 @@ class KebutuhanViewController: ViewController,
         tableViewKebutuhan.dataSource = self
         tableViewKebutuhan.delegate = self
         
+        tableViewKebutuhan.backgroundColor = .systemGray6
+        
     }
     
     @IBAction func didTapSelanutnyaBtn(_ sender: Any) {
@@ -62,6 +64,9 @@ class KebutuhanViewController: ViewController,
         let cell = tableViewKebutuhan.dequeueReusableCell(withIdentifier: "kebutuhanCell", for: indexPath)
         cell.textLabel?.text = "\(dummyKebutuhan[indexPath.row][0])"
         cell.detailTextLabel?.text = "\(dummyKebutuhan[indexPath.row][1])"
+        
+        cell.accessoryType = .disclosureIndicator
+        
         return cell
     }
     
@@ -71,6 +76,10 @@ class KebutuhanViewController: ViewController,
     
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         "Ini adalah daftar perencanaan pengeluaran kebutuhan kamu untuk bulan ini, contohnya : makan, cicilan, tagihan, dan juga segala sesuatu yang menurutmu wajib dibayarkan ataupun dibeli."
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableViewKebutuhan.deselectRow(at: indexPath, animated: true)
     }
     
 }
