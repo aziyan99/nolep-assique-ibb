@@ -9,6 +9,7 @@ import UIKit
 
 class PengaturanViewController: ViewController {
     var models = [SectionSettings]()
+    var window: UIWindow?
 
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
@@ -120,6 +121,18 @@ extension PengaturanViewController: UITableViewDelegate, UITableViewDataSource {
             }
             cell.configure(with: model)
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil)
+            guard let onBoardingViewController = storyboard.instantiateViewController(identifier: "OnBoardingViewController") as? OnBoardingViewController else{
+                print("ViewController not found")
+                return
+            }
+            window?.rootViewController = onBoardingViewController
         }
     }
 }

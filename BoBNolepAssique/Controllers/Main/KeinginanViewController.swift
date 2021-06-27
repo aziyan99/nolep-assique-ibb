@@ -83,6 +83,7 @@ class KeinginanViewController: ViewController {
         navBarAppearance.backgroundColor = GradientColor1
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        navigationController?.navigationBar.tintColor = .white
     }
     
     func setupSearchBar() {
@@ -133,6 +134,6 @@ extension KeinginanViewController: UITableViewDelegate, UITableViewDataSource {
         _ = indexPath.section
         _ = indexPath.row
         
-        self.performSegue(withIdentifier: "", sender: nil)
+        self.performSegue(withIdentifier: "addKeinginan", sender: nil)
     }
 }
