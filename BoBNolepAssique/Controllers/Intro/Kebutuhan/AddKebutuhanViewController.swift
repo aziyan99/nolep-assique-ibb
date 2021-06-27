@@ -7,7 +7,17 @@
 
 import UIKit
 
+enum KebutuhanData: Int {
+    case nameTextField = 0
+    case jumlahTextField
+    case hargaTextField
+}
+
 class AddKebutuhanViewController: ViewController {
+    
+    var nama: String!
+    var jumlah: String!
+    var harga: String!
     
     var models = [SectionDetail]()
     
@@ -45,7 +55,7 @@ class AddKebutuhanViewController: ViewController {
     func setupNavbar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Tutup", style: .done, target: self, action: #selector(didTapTutupBtn))
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Selesai", style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Selesai", style: .done, target: self, action: #selector(didTapSelesaiBtn))
     }
     
     override func viewDidLoad() {
@@ -55,8 +65,24 @@ class AddKebutuhanViewController: ViewController {
         setupTable()
     }
     
-    @objc func didTapTutupBtn(){
+    @objc func didTapTutupBtn() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func didTapSelesaiBtn() {
+        if !nama.isEmpty, !harga.isEmpty, !jumlah.isEmpty {
+            let newKebutuhan = KebutuhanHelper.createKebutuhan()
+            newKebutuhan.nama = self.nama
+            newKebutuhan.jumlah = self.jumlah
+            newKebutuhan.harga = cleanCharacter(val: self.harga)
+            newKebutuhan.updated_at = Date()
+            KebutuhanHelper.storeKebutuhan()
+            
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kebutuhanUpdated"), object: nil)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
 }
@@ -88,7 +114,33 @@ extension AddKebutuhanViewController: UITableViewDelegate, UITableViewDataSource
                 return UITableViewCell()
             }
             cell.configure(with: model)
+            cell.textInputField.delegate = self
+            cell.textInputField.tag = indexPath.row
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension AddKebutuhanViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
+    }
+    
+    @objc func valueChanged(_ textField: UITextField){
+        switch textField.tag {
+        case KebutuhanData.nameTextField.rawValue:
+            self.nama = textField.text
+        case KebutuhanData.jumlahTextField.rawValue:
+            self.jumlah = textField.text
+        case KebutuhanData.hargaTextField.rawValue:
+            self.harga = textField.text
+        default:
+            break
         }
     }
 }

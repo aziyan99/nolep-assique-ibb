@@ -31,6 +31,7 @@
 		08A841602688D0DE00787693 /* StructCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8415F2688D0DE00787693 /* StructCell.swift */; };
 		08A841622688D12500787693 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841612688D12500787693 /* NumberFormatter.swift */; };
 		08A841642688D14300787693 /* IdrFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841632688D14300787693 /* IdrFormatter.swift */; };
+		08A841652688D3E800787693 /* BoBNolepAssique.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 085370682678985400D30D8C /* BoBNolepAssique.xcdatamodeld */; };
 		08B4A5C726831ED300F5EFD1 /* AddInvestasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4A5C626831ED300F5EFD1 /* AddInvestasiViewController.swift */; };
 		08C2BF6426856DCD005A9B26 /* AddKebutuhanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF6326856DCD005A9B26 /* AddKebutuhanTableViewCell.swift */; };
 		08C2BF6726857455005A9B26 /* EditKebutuhanTabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF6626857455005A9B26 /* EditKebutuhanTabelViewCell.swift */; };
@@ -412,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A841652688D3E800787693 /* BoBNolepAssique.xcdatamodeld in Sources */,
 				08A841492688CEB400787693 /* Sisa+CoreDataProperties.swift in Sources */,
 				08A8415E2688D04B00787693 /* KebutuhanHelper.swift in Sources */,
 				08A841642688D14300787693 /* IdrFormatter.swift in Sources */,

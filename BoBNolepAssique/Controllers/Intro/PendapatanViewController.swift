@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class PendapatanViewController: ViewController {
     @IBOutlet weak var btnSelanjutnya: UIButton!
@@ -13,8 +14,26 @@ class PendapatanViewController: ViewController {
     @IBOutlet weak var bottomFormLabel: UILabel!
     @IBOutlet weak var pendapatanTextField: UITextField!
     
+    var dataPendapatan = [Pendapatan]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        setupPendapatanValue()
+    }
+    
+    func setupPendapatanValue() {
+        self.dataPendapatan = PendapatanHelper.getPendapatan()
+        if self.dataPendapatan.count > 0 {
+            let pendapatan = self.dataPendapatan[0].total ?? "0.0"
+            let pendapatanFormatter = idrFormatter(val: pendapatan)
+            self.pendapatanTextField.text = pendapatanFormatter
+        }else{
+            // pendapatan belum diset
+        }
+    }
+    
+    func setupView() {
         title = "Pendapatan"
         
         self.btnSelanjutnya.setTitle("Selanjutnya", for: UIControl.State.normal)
@@ -38,10 +57,24 @@ class PendapatanViewController: ViewController {
     }
     
     @IBAction func didTapSelanjutnyaBtn(_ sender: Any) {
-        let nextStoryboard = UIStoryboard(name: "Kebutuhan", bundle: nil)
-        let nextViewController = nextStoryboard.instantiateViewController(identifier: "KebutuhanViewController")
-        
-        show(nextViewController, sender: self)
+        if !pendapatanTextField.text!.isEmpty {
+            PendapatanHelper.emptyPendapatan()
+            let pendapatan = PendapatanHelper.createPendapatan()
+            pendapatan.total = cleanCharacter(val: pendapatanTextField.text!)
+            pendapatan.updated_at = Date()
+            PendapatanHelper.storePendapatan()
+            
+            SisaHelper.emptySisa()
+            let sisa = SisaHelper.createSisa()
+            sisa.total = cleanCharacter(val: pendapatanTextField.text!)
+            SisaHelper.storeSisa()
+            
+            let nextStoryboard = UIStoryboard(name: "Kebutuhan", bundle: nil)
+            let nextViewController = nextStoryboard.instantiateViewController(identifier: "KebutuhanViewController")
+            
+            show(nextViewController, sender: self)
+        }else{
+            // form kosong
+        }
     }
-    
 }
