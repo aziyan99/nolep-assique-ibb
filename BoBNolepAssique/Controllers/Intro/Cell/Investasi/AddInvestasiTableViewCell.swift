@@ -11,13 +11,13 @@ class AddInvestasiTableViewCell: UITableViewCell {
 
     static let identifier = "AddInvestasiTableViewCell"
     
-    private let label: UILabel = {
+    public let label: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
         return label
     }()
     
-    private let textInputField: UITextField = {
+    public let textInputField: UITextField = {
         let textInput = UITextField()
         return textInput
     }()
