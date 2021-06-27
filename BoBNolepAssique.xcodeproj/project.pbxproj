@@ -17,6 +17,12 @@
 		0853706C2678985500D30D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0853706B2678985500D30D8C /* Assets.xcassets */; };
 		0853706F2678985500D30D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0853706D2678985500D30D8C /* LaunchScreen.storyboard */; };
 		086B2C832688F873006A4B97 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C822688F873006A4B97 /* CommonData.swift */; };
+		086B2C86268908AB006A4B97 /* AktivitasBulananViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C85268908AB006A4B97 /* AktivitasBulananViewController.swift */; };
+		086B2C88268908DD006A4B97 /* RekapitulasiHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C87268908DD006A4B97 /* RekapitulasiHeaderViewController.swift */; };
+		086B2C8A26890907006A4B97 /* AktivitasBulanan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C8926890907006A4B97 /* AktivitasBulanan.swift */; };
+		086B2C8D26890936006A4B97 /* KeinginanImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C8C26890936006A4B97 /* KeinginanImageViewController.swift */; };
+		086B2C8F26890968006A4B97 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C8E26890968006A4B97 /* CollectionTableViewCell.swift */; };
+		086B2C912689098D006A4B97 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C902689098D006A4B97 /* TileCollectionViewCell.swift */; };
 		08A841442688CE9E00787693 /* Pendapatan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841422688CE9E00787693 /* Pendapatan+CoreDataClass.swift */; };
 		08A841452688CE9E00787693 /* Pendapatan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841432688CE9E00787693 /* Pendapatan+CoreDataProperties.swift */; };
 		08A841482688CEB400787693 /* Sisa+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841462688CEB400787693 /* Sisa+CoreDataClass.swift */; };
@@ -77,6 +83,12 @@
 		0853706E2678985500D30D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		085370702678985500D30D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		086B2C822688F873006A4B97 /* CommonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
+		086B2C85268908AB006A4B97 /* AktivitasBulananViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AktivitasBulananViewController.swift; sourceTree = "<group>"; };
+		086B2C87268908DD006A4B97 /* RekapitulasiHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekapitulasiHeaderViewController.swift; sourceTree = "<group>"; };
+		086B2C8926890907006A4B97 /* AktivitasBulanan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AktivitasBulanan.swift; sourceTree = "<group>"; };
+		086B2C8C26890936006A4B97 /* KeinginanImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeinginanImageViewController.swift; sourceTree = "<group>"; };
+		086B2C8E26890968006A4B97 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		086B2C902689098D006A4B97 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
 		08A841422688CE9E00787693 /* Pendapatan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		08A841432688CE9E00787693 /* Pendapatan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		08A841462688CEB400787693 /* Sisa+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -180,6 +192,27 @@
 				085370682678985400D30D8C /* BoBNolepAssique.xcdatamodeld */,
 			);
 			path = BoBNolepAssique;
+			sourceTree = "<group>";
+		};
+		086B2C8426890867006A4B97 /* RekapitulasiView */ = {
+			isa = PBXGroup;
+			children = (
+				086B2C8B26890914006A4B97 /* KeinginanImage */,
+				086B2C85268908AB006A4B97 /* AktivitasBulananViewController.swift */,
+				086B2C87268908DD006A4B97 /* RekapitulasiHeaderViewController.swift */,
+				086B2C8926890907006A4B97 /* AktivitasBulanan.swift */,
+			);
+			path = RekapitulasiView;
+			sourceTree = "<group>";
+		};
+		086B2C8B26890914006A4B97 /* KeinginanImage */ = {
+			isa = PBXGroup;
+			children = (
+				086B2C8C26890936006A4B97 /* KeinginanImageViewController.swift */,
+				086B2C8E26890968006A4B97 /* CollectionTableViewCell.swift */,
+				086B2C902689098D006A4B97 /* TileCollectionViewCell.swift */,
+			);
+			path = KeinginanImage;
 			sourceTree = "<group>";
 		};
 		08A841412688CE7E00787693 /* Coredata */ = {
@@ -318,6 +351,7 @@
 		08CDC5EA267AD7AA0073176F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				086B2C8426890867006A4B97 /* RekapitulasiView */,
 				08CDC5C2267ACB700073176F /* RekapitulasiViewController.swift */,
 				08CDC5C6267ACC3F0073176F /* KeinginanViewController.swift */,
 				08CDC5C4267ACC050073176F /* PengaturanViewController.swift */,
@@ -506,8 +540,10 @@
 				08C2BF69268574C3005A9B26 /* EditKebutuhanViewController.swift in Sources */,
 				08CDC5EC267AE02A0073176F /* SceneDelegate.swift in Sources */,
 				08CDC5DE267AD6000073176F /* DanaImpulsifViewController.swift in Sources */,
+				086B2C8A26890907006A4B97 /* AktivitasBulanan.swift in Sources */,
 				0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */,
 				08CDC5C5267ACC050073176F /* PengaturanViewController.swift in Sources */,
+				086B2C8F26890968006A4B97 /* CollectionTableViewCell.swift in Sources */,
 				0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */,
 				08A841552688CF1E00787693 /* Investasi+CoreDataProperties.swift in Sources */,
 				085370642678985400D30D8C /* ViewController.swift in Sources */,
@@ -517,13 +553,17 @@
 				086B2C832688F873006A4B97 /* CommonData.swift in Sources */,
 				08CDC5C7267ACC3F0073176F /* KeinginanViewController.swift in Sources */,
 				08C2BF6726857455005A9B26 /* EditKebutuhanTabelViewCell.swift in Sources */,
+				086B2C88268908DD006A4B97 /* RekapitulasiHeaderViewController.swift in Sources */,
 				08C2BF6E26858516005A9B26 /* EditInvestasiTableViewCell.swift in Sources */,
 				08A841482688CEB400787693 /* Sisa+CoreDataClass.swift in Sources */,
 				08A841582688CFEB00787693 /* SisaHelper.swift in Sources */,
 				08C2BF6C268584FF005A9B26 /* AddInvestasiTableViewCell.swift in Sources */,
+				086B2C8D26890936006A4B97 /* KeinginanImageViewController.swift in Sources */,
 				085370602678985400D30D8C /* AppDelegate.swift in Sources */,
+				086B2C912689098D006A4B97 /* TileCollectionViewCell.swift in Sources */,
 				08CDC5DC267AD59A0073176F /* InvestasiViewController.swift in Sources */,
 				08CDC5D0267AD1C30073176F /* FirstCheck.swift in Sources */,
+				086B2C86268908AB006A4B97 /* AktivitasBulananViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
