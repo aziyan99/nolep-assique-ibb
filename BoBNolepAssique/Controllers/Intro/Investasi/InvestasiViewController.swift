@@ -42,7 +42,7 @@ class InvestasiViewController: ViewController {
     }
     
     func prepareView() {
-        title = "Investai"
+        title = "Investasi"
         self.sisaBudgetLabel.text = "Sisa Budget"
         self.totalPengeluaranLabel.text = "Pengeluaran"
 
