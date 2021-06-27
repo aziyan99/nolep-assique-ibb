@@ -16,6 +16,14 @@
 		085370672678985400D30D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085370652678985400D30D8C /* Main.storyboard */; };
 		0853706C2678985500D30D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0853706B2678985500D30D8C /* Assets.xcassets */; };
 		0853706F2678985500D30D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0853706D2678985500D30D8C /* LaunchScreen.storyboard */; };
+		08A841442688CE9E00787693 /* Pendapatan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841422688CE9E00787693 /* Pendapatan+CoreDataClass.swift */; };
+		08A841452688CE9E00787693 /* Pendapatan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841432688CE9E00787693 /* Pendapatan+CoreDataProperties.swift */; };
+		08A841482688CEB400787693 /* Sisa+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841462688CEB400787693 /* Sisa+CoreDataClass.swift */; };
+		08A841492688CEB400787693 /* Sisa+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841472688CEB400787693 /* Sisa+CoreDataProperties.swift */; };
+		08A8414C2688CECD00787693 /* Kebutuhan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8414A2688CECD00787693 /* Kebutuhan+CoreDataClass.swift */; };
+		08A8414D2688CECD00787693 /* Kebutuhan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8414B2688CECD00787693 /* Kebutuhan+CoreDataProperties.swift */; };
+		08A841542688CF1E00787693 /* Investasi+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841522688CF1E00787693 /* Investasi+CoreDataClass.swift */; };
+		08A841552688CF1E00787693 /* Investasi+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841532688CF1E00787693 /* Investasi+CoreDataProperties.swift */; };
 		08B4A5C726831ED300F5EFD1 /* AddInvestasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4A5C626831ED300F5EFD1 /* AddInvestasiViewController.swift */; };
 		08C2BF6426856DCD005A9B26 /* AddKebutuhanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF6326856DCD005A9B26 /* AddKebutuhanTableViewCell.swift */; };
 		08C2BF6726857455005A9B26 /* EditKebutuhanTabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF6626857455005A9B26 /* EditKebutuhanTabelViewCell.swift */; };
@@ -58,6 +66,14 @@
 		0853706B2678985500D30D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0853706E2678985500D30D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		085370702678985500D30D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08A841422688CE9E00787693 /* Pendapatan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		08A841432688CE9E00787693 /* Pendapatan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		08A841462688CEB400787693 /* Sisa+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		08A841472688CEB400787693 /* Sisa+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		08A8414A2688CECD00787693 /* Kebutuhan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kebutuhan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		08A8414B2688CECD00787693 /* Kebutuhan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kebutuhan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		08A841522688CF1E00787693 /* Investasi+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investasi+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		08A841532688CF1E00787693 /* Investasi+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investasi+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		08B4A5C626831ED300F5EFD1 /* AddInvestasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInvestasiViewController.swift; sourceTree = "<group>"; };
 		08C2BF6326856DCD005A9B26 /* AddKebutuhanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKebutuhanTableViewCell.swift; sourceTree = "<group>"; };
 		08C2BF6626857455005A9B26 /* EditKebutuhanTabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKebutuhanTabelViewCell.swift; sourceTree = "<group>"; };
@@ -127,6 +143,7 @@
 		0853705E2678985400D30D8C /* BoBNolepAssique */ = {
 			isa = PBXGroup;
 			children = (
+				08A841412688CE7E00787693 /* Coredata */,
 				08CDC5E8267AD7950073176F /* Controllers */,
 				08CDC5E5267AD6FF0073176F /* Views */,
 				08CDC5CE267AD1AF0073176F /* Helpers */,
@@ -139,6 +156,21 @@
 				085370682678985400D30D8C /* BoBNolepAssique.xcdatamodeld */,
 			);
 			path = BoBNolepAssique;
+			sourceTree = "<group>";
+		};
+		08A841412688CE7E00787693 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				08A841522688CF1E00787693 /* Investasi+CoreDataClass.swift */,
+				08A841532688CF1E00787693 /* Investasi+CoreDataProperties.swift */,
+				08A8414A2688CECD00787693 /* Kebutuhan+CoreDataClass.swift */,
+				08A8414B2688CECD00787693 /* Kebutuhan+CoreDataProperties.swift */,
+				08A841462688CEB400787693 /* Sisa+CoreDataClass.swift */,
+				08A841472688CEB400787693 /* Sisa+CoreDataProperties.swift */,
+				08A841422688CE9E00787693 /* Pendapatan+CoreDataClass.swift */,
+				08A841432688CE9E00787693 /* Pendapatan+CoreDataProperties.swift */,
+			);
+			path = Coredata;
 			sourceTree = "<group>";
 		};
 		08B4A5C526831EB300F5EFD1 /* Investasi */ = {
@@ -351,12 +383,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A841492688CEB400787693 /* Sisa+CoreDataProperties.swift in Sources */,
 				0830DAB92685DDB00045211F /* SecondOnBoardingViewController.swift in Sources */,
+				08A841542688CF1E00787693 /* Investasi+CoreDataClass.swift in Sources */,
+				08A841442688CE9E00787693 /* Pendapatan+CoreDataClass.swift in Sources */,
+				08A8414D2688CECD00787693 /* Kebutuhan+CoreDataProperties.swift in Sources */,
+				08A8414C2688CECD00787693 /* Kebutuhan+CoreDataClass.swift in Sources */,
 				08CDC5E2267AD6510073176F /* PerkiraanBiayaViewController.swift in Sources */,
 				08C2BF7026858586005A9B26 /* EditInvestasiViewController.swift in Sources */,
 				08CDC5D8267AD5410073176F /* KebutuhanViewController.swift in Sources */,
 				08B4A5C726831ED300F5EFD1 /* AddInvestasiViewController.swift in Sources */,
 				08C2BF6426856DCD005A9B26 /* AddKebutuhanTableViewCell.swift in Sources */,
+				08A841452688CE9E00787693 /* Pendapatan+CoreDataProperties.swift in Sources */,
 				08CDC5D4267AD5170073176F /* PendapatanViewController.swift in Sources */,
 				08C2BF69268574C3005A9B26 /* EditKebutuhanViewController.swift in Sources */,
 				08CDC5EC267AE02A0073176F /* SceneDelegate.swift in Sources */,
@@ -364,12 +402,14 @@
 				0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */,
 				08CDC5C5267ACC050073176F /* PengaturanViewController.swift in Sources */,
 				0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */,
+				08A841552688CF1E00787693 /* Investasi+CoreDataProperties.swift in Sources */,
 				085370642678985400D30D8C /* ViewController.swift in Sources */,
 				08CDC5C3267ACB700073176F /* RekapitulasiViewController.swift in Sources */,
 				3FE03AF1267B481700A30BD4 /* OnBoardingViewController.swift in Sources */,
 				08CDC5C7267ACC3F0073176F /* KeinginanViewController.swift in Sources */,
 				08C2BF6726857455005A9B26 /* EditKebutuhanTabelViewCell.swift in Sources */,
 				08C2BF6E26858516005A9B26 /* EditInvestasiTableViewCell.swift in Sources */,
+				08A841482688CEB400787693 /* Sisa+CoreDataClass.swift in Sources */,
 				08C2BF6C268584FF005A9B26 /* AddInvestasiTableViewCell.swift in Sources */,
 				085370602678985400D30D8C /* AppDelegate.swift in Sources */,
 				08CDC5DC267AD59A0073176F /* InvestasiViewController.swift in Sources */,
