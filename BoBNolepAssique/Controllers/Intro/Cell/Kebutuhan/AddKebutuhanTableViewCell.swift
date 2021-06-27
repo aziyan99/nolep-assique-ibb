@@ -11,13 +11,13 @@ class AddKebutuhanTableViewCell: UITableViewCell {
 
     static let identifier = "AddKebutuhanTableViewCell"
     
-    private let label: UILabel = {
+    public let label: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
         return label
     }()
     
-    private let textInputField: UITextField = {
+    public let textInputField: UITextField = {
         let textInput = UITextField()
         return textInput
     }()
@@ -46,7 +46,7 @@ class AddKebutuhanTableViewCell: UITableViewCell {
         textInputField.text = nil
     }
     
-    public func configure(with model: TableInputDetails) {
+    public func configure(with model: TableInputDetailsIntro) {
         label.text = model.title
     }
 

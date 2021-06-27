@@ -1,0 +1,6 @@
+framework module Pods_BoBNolepAssique {
+  umbrella header "Pods-BoBNolepAssique-umbrella.h"
+
+  export *
+  module * { export * }
+}

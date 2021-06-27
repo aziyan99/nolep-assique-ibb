@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import Charts
+
+struct Overall {
+    var nama: String
+    var total: String
+}
 
 class PerkiraanBiayaViewController: ViewController {
     
@@ -15,16 +21,66 @@ class PerkiraanBiayaViewController: ViewController {
     @IBOutlet weak var topMessageContainer: UIView!
     @IBOutlet weak var topMessageValue: UILabel!
     @IBOutlet weak var perkiraanBiayaTableView: UITableView!
+    @IBOutlet weak var pieChartView: PieChartView!
     
-    
-    let dummyData = [
-        ["Kebutuhan", "Rp 1.000.000,00"],
-        ["Investasi", "Rp 600.000,00"],
-        ["Impulsif", "Rp 0,00"]
-    ]
+    var results = [Overall]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.prepareData()
+        self.prepareView()
+        
+        customizeChart(dataPoints: players, values: goals.map{ Double($0) })
+    }
+    
+    func customizeChart(dataPoints: [String], values: [Double]) {
+        // 1. Set ChartDataEntry
+         var dataEntries: [ChartDataEntry] = []
+         for i in 0..<dataPoints.count {
+           let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
+           dataEntries.append(dataEntry)
+         }
+        
+         // 2. Set ChartDataSet
+        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
+        pieChartDataSet.colors = ChartColorTemplates.pastel()
+        
+         // 3. Set ChartData
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        let format = NumberFormatter()
+        format.numberStyle = .percent
+        let formatter = DefaultValueFormatter(formatter: format)
+        pieChartData.setValueFormatter(formatter)
+        
+         // 4. Assign it to the chart’s data
+        pieChartView.legend.enabled = false
+        pieChartView.rotationEnabled = true
+        pieChartView.isUserInteractionEnabled = true
+        pieChartView.tintColor = .darkGray
+        pieChartView.data = pieChartData
+    }
+    
+    private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
+        var colors: [UIColor] = []
+        for index in 0..<numbersOfColor {
+            var color = UIColor()
+            if index == 0 {
+                color = UIColor(red: CGFloat(94/255), green: CGFloat(101/255), blue: CGFloat(121/255), alpha: 1)
+            }else if index == 1 {
+                color = UIColor(red: CGFloat(212/255), green: CGFloat(156/255), blue: CGFloat(130/255), alpha: 1)
+            }else{
+                color = UIColor(red: CGFloat(63/255), green: CGFloat(52/255), blue: CGFloat(61/255), alpha: 1)
+            }
+            colors.append(color)
+        }
+        return colors
+    }
+    
+    func prepareData() {
+        self.calculateSisa()
+    }
+    
+    func prepareView() {
         title = "Perkiraan Biaya"
         self.btnSelesai.setTitle("Selesai", for: UIControl.State.normal)
         self.btnSelesai.layer.cornerRadius = 5
@@ -39,6 +95,33 @@ class PerkiraanBiayaViewController: ViewController {
         self.perkiraanBiayaTableView.dataSource = self
         self.perkiraanBiayaTableView.delegate = self
         
+//        self.perkiraanBiayaTableView.backgroundColor = .systemGray6
+    }
+    
+    func calculateSisa() {
+        var dataKebutuhan = [Kebutuhan]()
+        var dataInvestasi = [Investasi]()
+        dataKebutuhan = KebutuhanHelper.getKebutuhan()
+        dataInvestasi = InvestasiHelper.getInvestasi()
+        
+        
+        var totalKebutuhan: Double = 0.0
+        var totalInvestasi: Double = 0.0
+        for data in dataKebutuhan{
+            let harga = (data.harga! as NSString).doubleValue
+            totalKebutuhan += harga
+        }
+        for data in dataInvestasi{
+            let harga = (data.harga! as NSString).doubleValue
+            totalInvestasi += harga
+        }
+        
+        let resKebutuhan = (totalKebutuhan as NSNumber).stringValue
+        let resInvestasi = (totalInvestasi as NSNumber).stringValue
+        
+        self.results.append(Overall(nama: "Kebutuhan", total: idrFormatter(val: resKebutuhan)))
+        self.results.append(Overall(nama: "Investasi", total: idrFormatter(val: resInvestasi)))
+        self.results.append(Overall(nama: "Keinginan", total: idrFormatter(val: "0")))
     }
 
     @IBAction func didTapSelesaiBtn(_ sender: Any) {
@@ -65,10 +148,8 @@ class PerkiraanBiayaViewController: ViewController {
         
         self.present(optionMenu, animated: true, completion: nil)
     }
-    
-    
-    
 }
+
 
 extension PerkiraanBiayaViewController: UITableViewDelegate,
                                         UITableViewDataSource{
@@ -76,14 +157,14 @@ extension PerkiraanBiayaViewController: UITableViewDelegate,
      Table view
      */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummyData.count
+        return self.results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = perkiraanBiayaTableView.dequeueReusableCell(withIdentifier: "perkiraanBiayaCell", for: indexPath)
         
-        cell.textLabel?.text = "\(dummyData[indexPath.row][0])"
-        cell.detailTextLabel?.text = "\(dummyData[indexPath.row][0])"
+        cell.textLabel?.text = self.results[indexPath.row].nama
+        cell.detailTextLabel?.text = self.results[indexPath.row].total
         
         cell.accessoryType = .disclosureIndicator
         
@@ -123,3 +204,4 @@ extension PerkiraanBiayaViewController: UITableViewDelegate,
         return "Ini adalah total perkiraan biaya dari masing-masing akumulasi pembagian keuangan kamu, jangan takut untuk mengubahnya lagi jika menurutmu kurang tepat."
     }
 }
+

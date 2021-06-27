@@ -19,13 +19,13 @@
     </entity>
     <entity name="Investasi" representedClassName="Investasi" syncable="YES">
         <attribute name="harga" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="jumlah" optional="YES" attributeType="String"/>
         <attribute name="nama" optional="YES" attributeType="String"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="Kebutuhan" representedClassName="Kebutuhan" syncable="YES">
         <attribute name="harga" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="jumlah" optional="YES" attributeType="String"/>
         <attribute name="nama" optional="YES" attributeType="String"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
@@ -43,12 +43,10 @@
         <relationship name="ofHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="History" inverseName="keinginans" inverseEntity="History"/>
     </entity>
     <entity name="Pendapatan" representedClassName="Pendapatan" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="total" optional="YES" attributeType="String"/>
         <attribute name="updated_at" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="Sisa" representedClassName="Sisa" syncable="YES">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="total" optional="YES" attributeType="String"/>
     </entity>
     <elements>
@@ -57,7 +55,7 @@
         <element name="Investasi" positionX="-36" positionY="45" width="128" height="89"/>
         <element name="Kebutuhan" positionX="-54" positionY="18" width="128" height="89"/>
         <element name="Keinginan" positionX="18" positionY="90" width="128" height="194"/>
-        <element name="Pendapatan" positionX="-63" positionY="-9" width="128" height="74"/>
-        <element name="Sisa" positionX="-18" positionY="72" width="128" height="59"/>
+        <element name="Pendapatan" positionX="-63" positionY="-9" width="128" height="59"/>
+        <element name="Sisa" positionX="-18" positionY="72" width="128" height="44"/>
     </elements>
 </model>

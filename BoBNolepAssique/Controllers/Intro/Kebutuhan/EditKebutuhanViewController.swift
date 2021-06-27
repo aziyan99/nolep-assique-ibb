@@ -9,7 +9,15 @@ import UIKit
 
 class EditKebutuhanViewController: ViewController {
 
-    var models = [SectionDetail]()
+    var models = [SectionDetailIntro]()
+    
+    var nama: String!
+    var jumlah: String!
+    var harga: String!
+    
+    var editKebutuhan = [String]()
+    var kebutuhan: Kebutuhan?
+    
     
     let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
@@ -26,16 +34,16 @@ class EditKebutuhanViewController: ViewController {
     }
     
     func setupModel() {
-        models.append(SectionDetail(title: "DETAIL KEBUTUHAN", options: [
-            .switchCell(model: TableInputDetails(title: "Nama", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
+        models.append(SectionDetailIntro(title: "DETAIL KEBUTUHAN", options: [
+            .switchCell(model: TableInputDetailsIntro(title: "Nama", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
                 {
                 print("Nama")
             }),
-            .switchCell(model: TableInputDetails(title: "Jumlah", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
+            .switchCell(model: TableInputDetailsIntro(title: "Jumlah", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
                 {
                 print("Jumlah")
             }),
-            .switchCell(model: TableInputDetails(title: "Harga", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
+            .switchCell(model: TableInputDetailsIntro(title: "Harga", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
                 {
                 print("Harga")
             })
@@ -45,7 +53,7 @@ class EditKebutuhanViewController: ViewController {
     func setupNavbar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Tutup", style: .done, target: self, action: #selector(didTapTutupBtn))
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Selesai", style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Selesai", style: .plain, target: self, action: #selector(didTapSelesaiBtn))
     }
     
     override func viewDidLoad() {
@@ -53,10 +61,31 @@ class EditKebutuhanViewController: ViewController {
         title = "Ubah Kebutuhan"
         setupNavbar()
         setupTable()
+        
+        self.editKebutuhan.append(self.nama)
+        self.editKebutuhan.append(self.jumlah)
+        self.editKebutuhan.append(self.harga)
+    
     }
     
     @objc func didTapTutupBtn(){
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func didTapSelesaiBtn(){
+        if !nama.isEmpty, !harga.isEmpty, !jumlah.isEmpty {
+            kebutuhan?.nama = self.nama
+            kebutuhan?.jumlah = self.jumlah
+            kebutuhan?.harga = cleanCharacter(val: self.harga)
+            kebutuhan?.updated_at = Date()
+            KebutuhanHelper.storeKebutuhan()
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kebutuhanUpdated"), object: nil)
+            
+            self.dismiss(animated: true, completion: nil)
+        }else{
+            print("emptyyy")
+        }
     }
 
 }
@@ -82,14 +111,42 @@ extension EditKebutuhanViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let model = models[indexPath.section].options[indexPath.row]
         switch model.self {
         case .switchCell(let model):
             guard let cell = tableView.dequeueReusableCell(withIdentifier: EditKebutuhanTabelViewCell.identifier, for: indexPath) as? EditKebutuhanTabelViewCell else {
                 return UITableViewCell()
             }
+            if indexPath.row > 1 {
+                cell.textInputField.text! = idrFormatter(val: self.editKebutuhan[indexPath.row])
+            }else {
+                cell.textInputField.text! = self.editKebutuhan[indexPath.row]
+            }
+            cell.textInputField.delegate = self
+            cell.textInputField.tag = indexPath.row
             cell.configure(with: model)
             return cell
+        }
+    }
+}
+
+extension EditKebutuhanViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
+    }
+    
+    @objc func valueChanged(_ textField: UITextField){
+        switch textField.tag {
+        case KebutuhanData.nameTextField.rawValue:
+            self.nama = textField.text
+        case KebutuhanData.jumlahTextField.rawValue:
+            self.jumlah = textField.text
+        case KebutuhanData.hargaTextField.rawValue:
+            self.harga = textField.text
+        default:
+            break
         }
     }
 }

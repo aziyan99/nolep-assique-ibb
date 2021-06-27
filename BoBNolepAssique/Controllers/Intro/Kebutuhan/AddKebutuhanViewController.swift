@@ -7,26 +7,19 @@
 
 import UIKit
 
-struct SectionDetail {
-    let title: String
-    let options: [TableInputType]
-    let footer: String
-}
-
-enum TableInputType {
-    case switchCell(model: TableInputDetails)
-}
-struct TableInputDetails {
-    let title: String
-    let icon: UIImage?
-    let iconBackgrounColor: UIColor
-    var isOn: Bool
-    let handler: (() -> Void)
+enum KebutuhanData: Int {
+    case nameTextField = 0
+    case jumlahTextField
+    case hargaTextField
 }
 
 class AddKebutuhanViewController: ViewController {
     
-    var models = [SectionDetail]()
+    var nama: String!
+    var jumlah: String!
+    var harga: String!
+    
+    var models = [SectionDetailIntro]()
     
     let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
@@ -43,16 +36,16 @@ class AddKebutuhanViewController: ViewController {
     }
     
     func setupModel() {
-        models.append(SectionDetail(title: "DETAIL KEBUTUHAN", options: [
-            .switchCell(model: TableInputDetails(title: "Nama", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
+        models.append(SectionDetailIntro(title: "DETAIL KEBUTUHAN", options: [
+            .switchCell(model: TableInputDetailsIntro(title: "Nama", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
                 {
                 print("Nama")
             }),
-            .switchCell(model: TableInputDetails(title: "Jumlah", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
+            .switchCell(model: TableInputDetailsIntro(title: "Jumlah", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
                 {
                 print("Jumlah")
             }),
-            .switchCell(model: TableInputDetails(title: "Harga", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
+            .switchCell(model: TableInputDetailsIntro(title: "Harga", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
                 {
                 print("Harga")
             })
@@ -62,7 +55,7 @@ class AddKebutuhanViewController: ViewController {
     func setupNavbar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Tutup", style: .done, target: self, action: #selector(didTapTutupBtn))
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Selesai", style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Selesai", style: .done, target: self, action: #selector(didTapSelesaiBtn))
     }
     
     override func viewDidLoad() {
@@ -72,8 +65,24 @@ class AddKebutuhanViewController: ViewController {
         setupTable()
     }
     
-    @objc func didTapTutupBtn(){
+    @objc func didTapTutupBtn() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func didTapSelesaiBtn() {
+        if !nama.isEmpty, !harga.isEmpty, !jumlah.isEmpty {
+            let newKebutuhan = KebutuhanHelper.createKebutuhan()
+            newKebutuhan.nama = self.nama
+            newKebutuhan.jumlah = self.jumlah
+            newKebutuhan.harga = cleanCharacter(val: self.harga)
+            newKebutuhan.updated_at = Date()
+            KebutuhanHelper.storeKebutuhan()
+            
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kebutuhanUpdated"), object: nil)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
 }
@@ -105,7 +114,33 @@ extension AddKebutuhanViewController: UITableViewDelegate, UITableViewDataSource
                 return UITableViewCell()
             }
             cell.configure(with: model)
+            cell.textInputField.delegate = self
+            cell.textInputField.tag = indexPath.row
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension AddKebutuhanViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
+    }
+    
+    @objc func valueChanged(_ textField: UITextField){
+        switch textField.tag {
+        case KebutuhanData.nameTextField.rawValue:
+            self.nama = textField.text
+        case KebutuhanData.jumlahTextField.rawValue:
+            self.jumlah = textField.text
+        case KebutuhanData.hargaTextField.rawValue:
+            self.harga = textField.text
+        default:
+            break
         }
     }
 }

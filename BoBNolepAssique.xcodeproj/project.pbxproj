@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,38 @@
 		085370672678985400D30D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085370652678985400D30D8C /* Main.storyboard */; };
 		0853706C2678985500D30D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0853706B2678985500D30D8C /* Assets.xcassets */; };
 		0853706F2678985500D30D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0853706D2678985500D30D8C /* LaunchScreen.storyboard */; };
+		086B2C832688F873006A4B97 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C822688F873006A4B97 /* CommonData.swift */; };
+		086B2C86268908AB006A4B97 /* AktivitasBulananViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C85268908AB006A4B97 /* AktivitasBulananViewController.swift */; };
+		086B2C88268908DD006A4B97 /* RekapitulasiHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C87268908DD006A4B97 /* RekapitulasiHeaderViewController.swift */; };
+		086B2C8A26890907006A4B97 /* AktivitasBulanan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C8926890907006A4B97 /* AktivitasBulanan.swift */; };
+		086B2C8D26890936006A4B97 /* KeinginanImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C8C26890936006A4B97 /* KeinginanImageViewController.swift */; };
+		086B2C8F26890968006A4B97 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C8E26890968006A4B97 /* CollectionTableViewCell.swift */; };
+		086B2C912689098D006A4B97 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C902689098D006A4B97 /* TileCollectionViewCell.swift */; };
+		086B2C9426890B58006A4B97 /* KeinginanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C9326890B58006A4B97 /* KeinginanTableViewCell.swift */; };
+		086B2C9626890B7A006A4B97 /* PengaturanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C9526890B7A006A4B97 /* PengaturanTableViewCell.swift */; };
+		086B2C9826890B95006A4B97 /* PengaturanSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C9726890B95006A4B97 /* PengaturanSwitchTableViewCell.swift */; };
+		086B2C9A26890BAD006A4B97 /* DetailKeinginanUploadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C9926890BAD006A4B97 /* DetailKeinginanUploadTableViewCell.swift */; };
+		086B2C9C26890C05006A4B97 /* DetailKeinginanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C9B26890C05006A4B97 /* DetailKeinginanViewController.swift */; };
+		086B2C9F26890DF3006A4B97 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C9D26890DF3006A4B97 /* History+CoreDataClass.swift */; };
+		086B2CA026890DF3006A4B97 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C9E26890DF3006A4B97 /* History+CoreDataProperties.swift */; };
+		086B2CA326890E05006A4B97 /* Keinginan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2CA126890E05006A4B97 /* Keinginan+CoreDataClass.swift */; };
+		086B2CA426890E05006A4B97 /* Keinginan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2CA226890E05006A4B97 /* Keinginan+CoreDataProperties.swift */; };
+		08A841442688CE9E00787693 /* Pendapatan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841422688CE9E00787693 /* Pendapatan+CoreDataClass.swift */; };
+		08A841452688CE9E00787693 /* Pendapatan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841432688CE9E00787693 /* Pendapatan+CoreDataProperties.swift */; };
+		08A841482688CEB400787693 /* Sisa+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841462688CEB400787693 /* Sisa+CoreDataClass.swift */; };
+		08A841492688CEB400787693 /* Sisa+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841472688CEB400787693 /* Sisa+CoreDataProperties.swift */; };
+		08A8414C2688CECD00787693 /* Kebutuhan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8414A2688CECD00787693 /* Kebutuhan+CoreDataClass.swift */; };
+		08A8414D2688CECD00787693 /* Kebutuhan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8414B2688CECD00787693 /* Kebutuhan+CoreDataProperties.swift */; };
+		08A841542688CF1E00787693 /* Investasi+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841522688CF1E00787693 /* Investasi+CoreDataClass.swift */; };
+		08A841552688CF1E00787693 /* Investasi+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841532688CF1E00787693 /* Investasi+CoreDataProperties.swift */; };
+		08A841582688CFEB00787693 /* SisaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841572688CFEB00787693 /* SisaHelper.swift */; };
+		08A8415A2688D00F00787693 /* PendapatanHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841592688D00F00787693 /* PendapatanHelper.swift */; };
+		08A8415C2688D03300787693 /* InvestasiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8415B2688D03300787693 /* InvestasiHelper.swift */; };
+		08A8415E2688D04B00787693 /* KebutuhanHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8415D2688D04B00787693 /* KebutuhanHelper.swift */; };
+		08A841602688D0DE00787693 /* StructCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8415F2688D0DE00787693 /* StructCell.swift */; };
+		08A841622688D12500787693 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841612688D12500787693 /* NumberFormatter.swift */; };
+		08A841642688D14300787693 /* IdrFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841632688D14300787693 /* IdrFormatter.swift */; };
+		08A841652688D3E800787693 /* BoBNolepAssique.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 085370682678985400D30D8C /* BoBNolepAssique.xcdatamodeld */; };
 		08B4A5C726831ED300F5EFD1 /* AddInvestasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B4A5C626831ED300F5EFD1 /* AddInvestasiViewController.swift */; };
 		08C2BF6426856DCD005A9B26 /* AddKebutuhanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF6326856DCD005A9B26 /* AddKebutuhanTableViewCell.swift */; };
 		08C2BF6726857455005A9B26 /* EditKebutuhanTabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C2BF6626857455005A9B26 /* EditKebutuhanTabelViewCell.swift */; };
@@ -42,6 +74,7 @@
 		08F91CD22679F588008BC4DE /* Pengaturan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F91CD12679F588008BC4DE /* Pengaturan.storyboard */; };
 		3FE03AEE267B472E00A30BD4 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE03AED267B472E00A30BD4 /* OnBoarding.storyboard */; };
 		3FE03AF1267B481700A30BD4 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE03AF0267B481700A30BD4 /* OnBoardingViewController.swift */; };
+		53E86C133139B83946118C23 /* Pods_BoBNolepAssique.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695570D9FDA4312262A77607 /* Pods_BoBNolepAssique.framework */; };
 		905F3B3B2679F2AD008B1A84 /* Keinginan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905F3B3A2679F2AD008B1A84 /* Keinginan.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +91,37 @@
 		0853706B2678985500D30D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0853706E2678985500D30D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		085370702678985500D30D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		086B2C822688F873006A4B97 /* CommonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
+		086B2C85268908AB006A4B97 /* AktivitasBulananViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AktivitasBulananViewController.swift; sourceTree = "<group>"; };
+		086B2C87268908DD006A4B97 /* RekapitulasiHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekapitulasiHeaderViewController.swift; sourceTree = "<group>"; };
+		086B2C8926890907006A4B97 /* AktivitasBulanan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AktivitasBulanan.swift; sourceTree = "<group>"; };
+		086B2C8C26890936006A4B97 /* KeinginanImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeinginanImageViewController.swift; sourceTree = "<group>"; };
+		086B2C8E26890968006A4B97 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		086B2C902689098D006A4B97 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
+		086B2C9326890B58006A4B97 /* KeinginanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeinginanTableViewCell.swift; sourceTree = "<group>"; };
+		086B2C9526890B7A006A4B97 /* PengaturanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PengaturanTableViewCell.swift; sourceTree = "<group>"; };
+		086B2C9726890B95006A4B97 /* PengaturanSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PengaturanSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		086B2C9926890BAD006A4B97 /* DetailKeinginanUploadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKeinginanUploadTableViewCell.swift; sourceTree = "<group>"; };
+		086B2C9B26890C05006A4B97 /* DetailKeinginanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKeinginanViewController.swift; sourceTree = "<group>"; };
+		086B2C9D26890DF3006A4B97 /* History+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		086B2C9E26890DF3006A4B97 /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		086B2CA126890E05006A4B97 /* Keinginan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keinginan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		086B2CA226890E05006A4B97 /* Keinginan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keinginan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		08A841422688CE9E00787693 /* Pendapatan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		08A841432688CE9E00787693 /* Pendapatan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		08A841462688CEB400787693 /* Sisa+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		08A841472688CEB400787693 /* Sisa+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		08A8414A2688CECD00787693 /* Kebutuhan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kebutuhan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		08A8414B2688CECD00787693 /* Kebutuhan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kebutuhan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		08A841522688CF1E00787693 /* Investasi+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investasi+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		08A841532688CF1E00787693 /* Investasi+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Investasi+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		08A841572688CFEB00787693 /* SisaHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SisaHelper.swift; sourceTree = "<group>"; };
+		08A841592688D00F00787693 /* PendapatanHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendapatanHelper.swift; sourceTree = "<group>"; };
+		08A8415B2688D03300787693 /* InvestasiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestasiHelper.swift; sourceTree = "<group>"; };
+		08A8415D2688D04B00787693 /* KebutuhanHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KebutuhanHelper.swift; sourceTree = "<group>"; };
+		08A8415F2688D0DE00787693 /* StructCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructCell.swift; sourceTree = "<group>"; };
+		08A841612688D12500787693 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		08A841632688D14300787693 /* IdrFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdrFormatter.swift; sourceTree = "<group>"; };
 		08B4A5C626831ED300F5EFD1 /* AddInvestasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInvestasiViewController.swift; sourceTree = "<group>"; };
 		08C2BF6326856DCD005A9B26 /* AddKebutuhanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKebutuhanTableViewCell.swift; sourceTree = "<group>"; };
 		08C2BF6626857455005A9B26 /* EditKebutuhanTabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKebutuhanTabelViewCell.swift; sourceTree = "<group>"; };
@@ -84,6 +148,9 @@
 		08F91CD12679F588008BC4DE /* Pengaturan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pengaturan.storyboard; sourceTree = "<group>"; };
 		3FE03AED267B472E00A30BD4 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		3FE03AF0267B481700A30BD4 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		42507B070B1626E6DC574192 /* Pods-BoBNolepAssique.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoBNolepAssique.release.xcconfig"; path = "Target Support Files/Pods-BoBNolepAssique/Pods-BoBNolepAssique.release.xcconfig"; sourceTree = "<group>"; };
+		695570D9FDA4312262A77607 /* Pods_BoBNolepAssique.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoBNolepAssique.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7271A541E931667BCD612C86 /* Pods-BoBNolepAssique.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoBNolepAssique.debug.xcconfig"; path = "Target Support Files/Pods-BoBNolepAssique/Pods-BoBNolepAssique.debug.xcconfig"; sourceTree = "<group>"; };
 		905F3B3A2679F2AD008B1A84 /* Keinginan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keinginan.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E86C133139B83946118C23 /* Pods_BoBNolepAssique.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +181,8 @@
 			children = (
 				0853705E2678985400D30D8C /* BoBNolepAssique */,
 				0853705D2678985400D30D8C /* Products */,
+				4AD4C5DA79024591BEA7BDDE /* Pods */,
+				9B57869EE1C0B487D4612B6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +197,7 @@
 		0853705E2678985400D30D8C /* BoBNolepAssique */ = {
 			isa = PBXGroup;
 			children = (
+				08A841412688CE7E00787693 /* Coredata */,
 				08CDC5E8267AD7950073176F /* Controllers */,
 				08CDC5E5267AD6FF0073176F /* Views */,
 				08CDC5CE267AD1AF0073176F /* Helpers */,
@@ -139,6 +210,68 @@
 				085370682678985400D30D8C /* BoBNolepAssique.xcdatamodeld */,
 			);
 			path = BoBNolepAssique;
+			sourceTree = "<group>";
+		};
+		086B2C8426890867006A4B97 /* RekapitulasiView */ = {
+			isa = PBXGroup;
+			children = (
+				086B2C8B26890914006A4B97 /* KeinginanImage */,
+				086B2C85268908AB006A4B97 /* AktivitasBulananViewController.swift */,
+				086B2C87268908DD006A4B97 /* RekapitulasiHeaderViewController.swift */,
+				086B2C8926890907006A4B97 /* AktivitasBulanan.swift */,
+			);
+			path = RekapitulasiView;
+			sourceTree = "<group>";
+		};
+		086B2C8B26890914006A4B97 /* KeinginanImage */ = {
+			isa = PBXGroup;
+			children = (
+				086B2C8C26890936006A4B97 /* KeinginanImageViewController.swift */,
+				086B2C8E26890968006A4B97 /* CollectionTableViewCell.swift */,
+				086B2C902689098D006A4B97 /* TileCollectionViewCell.swift */,
+			);
+			path = KeinginanImage;
+			sourceTree = "<group>";
+		};
+		086B2C9226890B37006A4B97 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				086B2C9326890B58006A4B97 /* KeinginanTableViewCell.swift */,
+				086B2C9526890B7A006A4B97 /* PengaturanTableViewCell.swift */,
+				086B2C9726890B95006A4B97 /* PengaturanSwitchTableViewCell.swift */,
+				086B2C9926890BAD006A4B97 /* DetailKeinginanUploadTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		08A841412688CE7E00787693 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				086B2CA126890E05006A4B97 /* Keinginan+CoreDataClass.swift */,
+				086B2CA226890E05006A4B97 /* Keinginan+CoreDataProperties.swift */,
+				086B2C9D26890DF3006A4B97 /* History+CoreDataClass.swift */,
+				086B2C9E26890DF3006A4B97 /* History+CoreDataProperties.swift */,
+				08A841522688CF1E00787693 /* Investasi+CoreDataClass.swift */,
+				08A841532688CF1E00787693 /* Investasi+CoreDataProperties.swift */,
+				08A8414A2688CECD00787693 /* Kebutuhan+CoreDataClass.swift */,
+				08A8414B2688CECD00787693 /* Kebutuhan+CoreDataProperties.swift */,
+				08A841462688CEB400787693 /* Sisa+CoreDataClass.swift */,
+				08A841472688CEB400787693 /* Sisa+CoreDataProperties.swift */,
+				08A841422688CE9E00787693 /* Pendapatan+CoreDataClass.swift */,
+				08A841432688CE9E00787693 /* Pendapatan+CoreDataProperties.swift */,
+			);
+			path = Coredata;
+			sourceTree = "<group>";
+		};
+		08A841562688CFCA00787693 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				08A841572688CFEB00787693 /* SisaHelper.swift */,
+				08A841592688D00F00787693 /* PendapatanHelper.swift */,
+				08A8415B2688D03300787693 /* InvestasiHelper.swift */,
+				08A8415D2688D04B00787693 /* KebutuhanHelper.swift */,
+			);
+			path = Coredata;
 			sourceTree = "<group>";
 		};
 		08B4A5C526831EB300F5EFD1 /* Investasi */ = {
@@ -181,8 +314,13 @@
 		08CDC5CE267AD1AF0073176F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				08A841562688CFCA00787693 /* Coredata */,
 				08CDC5CF267AD1C30073176F /* FirstCheck.swift */,
 				0820FD212681BA84006DA8DD /* UIColorExtension.swift */,
+				08A8415F2688D0DE00787693 /* StructCell.swift */,
+				08A841612688D12500787693 /* NumberFormatter.swift */,
+				08A841632688D14300787693 /* IdrFormatter.swift */,
+				086B2C822688F873006A4B97 /* CommonData.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -246,9 +384,12 @@
 		08CDC5EA267AD7AA0073176F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				086B2C9226890B37006A4B97 /* Cell */,
+				086B2C8426890867006A4B97 /* RekapitulasiView */,
 				08CDC5C2267ACB700073176F /* RekapitulasiViewController.swift */,
 				08CDC5C6267ACC3F0073176F /* KeinginanViewController.swift */,
 				08CDC5C4267ACC050073176F /* PengaturanViewController.swift */,
+				086B2C9B26890C05006A4B97 /* DetailKeinginanViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -271,6 +412,23 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
+		4AD4C5DA79024591BEA7BDDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7271A541E931667BCD612C86 /* Pods-BoBNolepAssique.debug.xcconfig */,
+				42507B070B1626E6DC574192 /* Pods-BoBNolepAssique.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9B57869EE1C0B487D4612B6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				695570D9FDA4312262A77607 /* Pods_BoBNolepAssique.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,9 +436,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 085370732678985500D30D8C /* Build configuration list for PBXNativeTarget "BoBNolepAssique" */;
 			buildPhases = (
+				B7C2874F487EF76014BC44E2 /* [CP] Check Pods Manifest.lock */,
 				085370582678985400D30D8C /* Sources */,
 				085370592678985400D30D8C /* Frameworks */,
 				0853705A2678985400D30D8C /* Resources */,
+				26D03FAC447657562CACEE7C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,34 +506,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26D03FAC447657562CACEE7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoBNolepAssique/Pods-BoBNolepAssique-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoBNolepAssique/Pods-BoBNolepAssique-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoBNolepAssique/Pods-BoBNolepAssique-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7C2874F487EF76014BC44E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoBNolepAssique-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		085370582678985400D30D8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A841652688D3E800787693 /* BoBNolepAssique.xcdatamodeld in Sources */,
+				08A841492688CEB400787693 /* Sisa+CoreDataProperties.swift in Sources */,
+				08A8415E2688D04B00787693 /* KebutuhanHelper.swift in Sources */,
+				08A841642688D14300787693 /* IdrFormatter.swift in Sources */,
 				0830DAB92685DDB00045211F /* SecondOnBoardingViewController.swift in Sources */,
+				086B2C9826890B95006A4B97 /* PengaturanSwitchTableViewCell.swift in Sources */,
+				086B2CA426890E05006A4B97 /* Keinginan+CoreDataProperties.swift in Sources */,
+				08A841542688CF1E00787693 /* Investasi+CoreDataClass.swift in Sources */,
+				08A841442688CE9E00787693 /* Pendapatan+CoreDataClass.swift in Sources */,
+				086B2C9F26890DF3006A4B97 /* History+CoreDataClass.swift in Sources */,
+				08A841622688D12500787693 /* NumberFormatter.swift in Sources */,
+				08A8414D2688CECD00787693 /* Kebutuhan+CoreDataProperties.swift in Sources */,
+				08A8414C2688CECD00787693 /* Kebutuhan+CoreDataClass.swift in Sources */,
 				08CDC5E2267AD6510073176F /* PerkiraanBiayaViewController.swift in Sources */,
 				08C2BF7026858586005A9B26 /* EditInvestasiViewController.swift in Sources */,
 				08CDC5D8267AD5410073176F /* KebutuhanViewController.swift in Sources */,
+				086B2C9A26890BAD006A4B97 /* DetailKeinginanUploadTableViewCell.swift in Sources */,
+				08A8415A2688D00F00787693 /* PendapatanHelper.swift in Sources */,
+				08A8415C2688D03300787693 /* InvestasiHelper.swift in Sources */,
+				086B2CA026890DF3006A4B97 /* History+CoreDataProperties.swift in Sources */,
 				08B4A5C726831ED300F5EFD1 /* AddInvestasiViewController.swift in Sources */,
+				086B2CA326890E05006A4B97 /* Keinginan+CoreDataClass.swift in Sources */,
 				08C2BF6426856DCD005A9B26 /* AddKebutuhanTableViewCell.swift in Sources */,
+				08A841452688CE9E00787693 /* Pendapatan+CoreDataProperties.swift in Sources */,
 				08CDC5D4267AD5170073176F /* PendapatanViewController.swift in Sources */,
 				08C2BF69268574C3005A9B26 /* EditKebutuhanViewController.swift in Sources */,
 				08CDC5EC267AE02A0073176F /* SceneDelegate.swift in Sources */,
 				08CDC5DE267AD6000073176F /* DanaImpulsifViewController.swift in Sources */,
+				086B2C8A26890907006A4B97 /* AktivitasBulanan.swift in Sources */,
+				086B2C9426890B58006A4B97 /* KeinginanTableViewCell.swift in Sources */,
 				0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */,
 				08CDC5C5267ACC050073176F /* PengaturanViewController.swift in Sources */,
+				086B2C8F26890968006A4B97 /* CollectionTableViewCell.swift in Sources */,
 				0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */,
+				08A841552688CF1E00787693 /* Investasi+CoreDataProperties.swift in Sources */,
 				085370642678985400D30D8C /* ViewController.swift in Sources */,
+				08A841602688D0DE00787693 /* StructCell.swift in Sources */,
 				08CDC5C3267ACB700073176F /* RekapitulasiViewController.swift in Sources */,
+				086B2C9626890B7A006A4B97 /* PengaturanTableViewCell.swift in Sources */,
 				3FE03AF1267B481700A30BD4 /* OnBoardingViewController.swift in Sources */,
+				086B2C9C26890C05006A4B97 /* DetailKeinginanViewController.swift in Sources */,
+				086B2C832688F873006A4B97 /* CommonData.swift in Sources */,
 				08CDC5C7267ACC3F0073176F /* KeinginanViewController.swift in Sources */,
 				08C2BF6726857455005A9B26 /* EditKebutuhanTabelViewCell.swift in Sources */,
+				086B2C88268908DD006A4B97 /* RekapitulasiHeaderViewController.swift in Sources */,
 				08C2BF6E26858516005A9B26 /* EditInvestasiTableViewCell.swift in Sources */,
+				08A841482688CEB400787693 /* Sisa+CoreDataClass.swift in Sources */,
+				08A841582688CFEB00787693 /* SisaHelper.swift in Sources */,
 				08C2BF6C268584FF005A9B26 /* AddInvestasiTableViewCell.swift in Sources */,
+				086B2C8D26890936006A4B97 /* KeinginanImageViewController.swift in Sources */,
 				085370602678985400D30D8C /* AppDelegate.swift in Sources */,
+				086B2C912689098D006A4B97 /* TileCollectionViewCell.swift in Sources */,
 				08CDC5DC267AD59A0073176F /* InvestasiViewController.swift in Sources */,
 				08CDC5D0267AD1C30073176F /* FirstCheck.swift in Sources */,
+				086B2C86268908AB006A4B97 /* AktivitasBulananViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +751,7 @@
 		};
 		085370742678985500D30D8C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7271A541E931667BCD612C86 /* Pods-BoBNolepAssique.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -536,6 +771,7 @@
 		};
 		085370752678985500D30D8C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42507B070B1626E6DC574192 /* Pods-BoBNolepAssique.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
