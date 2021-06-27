@@ -100,6 +100,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqf-BM-2D9" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="24" y="258" width="135" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HrD-s8-ajY"/>
+                                    <constraint firstAttribute="width" constant="135" id="lI5-gv-7Gu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -109,8 +117,10 @@
                             <constraint firstItem="hJF-iX-gze" firstAttribute="top" secondItem="dac-yw-maI" secondAttribute="bottom" constant="10" id="9OZ-Pe-er9"/>
                             <constraint firstItem="iJV-7n-B0I" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Gx0-w9-BM2"/>
                             <constraint firstItem="dac-yw-maI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="JQX-N1-9Na"/>
+                            <constraint firstItem="Bqf-BM-2D9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="JR2-W5-Gbg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hJF-iX-gze" secondAttribute="trailing" constant="16" id="Opq-hf-VnA"/>
                             <constraint firstItem="tUj-Gw-XUh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="PTM-nP-xtE"/>
+                            <constraint firstItem="Bqf-BM-2D9" firstAttribute="top" secondItem="tUj-Gw-XUh" secondAttribute="bottom" constant="20" id="SXL-cc-J3z"/>
                             <constraint firstItem="dac-yw-maI" firstAttribute="top" secondItem="iJV-7n-B0I" secondAttribute="bottom" id="TBQ-wD-K2b"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iJV-7n-B0I" secondAttribute="trailing" id="cXD-eM-bJ3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dac-yw-maI" secondAttribute="trailing" constant="16" id="erV-dq-Hto"/>

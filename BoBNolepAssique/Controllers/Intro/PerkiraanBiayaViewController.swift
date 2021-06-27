@@ -21,12 +21,37 @@ class PerkiraanBiayaViewController: ViewController {
     @IBOutlet weak var topMessageValue: UILabel!
     @IBOutlet weak var perkiraanBiayaTableView: UITableView!
     
+    let players = ["Ozil", "Ramsey", "Laca", "Auba", "Xhaka", "Torreira"]
+    let goals = [6, 8, 26, 30, 8, 10]
+    
     var results = [Overall]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.prepareData()
         self.prepareView()
+        
+        customizeChart(dataPoints: players, values: goals.map{ Double($0) })
+    }
+    
+    func customizeChart(dataPoints: [String], values: [Double]) {
+        // 1. Set ChartDataEntry
+          var dataEntries: [ChartDataEntry] = []
+          for i in 0..<dataPoints.count {
+            let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
+            dataEntries.append(dataEntry)
+          }
+          // 2. Set ChartDataSet
+          let pieChartDataSet = PieChartDataSet(values: dataEntries, label: nil)
+          pieChartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
+          // 3. Set ChartData
+          let pieChartData = PieChartData(dataSet: pieChartDataSet)
+          let format = NumberFormatter()
+          format.numberStyle = .none
+          let formatter = DefaultValueFormatter(formatter: format)
+          pieChartData.setValueFormatter(formatter)
+          // 4. Assign it to the chart’s data
+          pieChartView.data = pieChartData
     }
     
     func prepareData() {
