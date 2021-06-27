@@ -19,7 +19,7 @@ class AddKebutuhanViewController: ViewController {
     var jumlah: String!
     var harga: String!
     
-    var models = [SectionDetail]()
+    var models = [SectionDetailIntro]()
     
     let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
@@ -36,16 +36,16 @@ class AddKebutuhanViewController: ViewController {
     }
     
     func setupModel() {
-        models.append(SectionDetail(title: "DETAIL KEBUTUHAN", options: [
-            .switchCell(model: TableInputDetails(title: "Nama", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
+        models.append(SectionDetailIntro(title: "DETAIL KEBUTUHAN", options: [
+            .switchCell(model: TableInputDetailsIntro(title: "Nama", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
                 {
                 print("Nama")
             }),
-            .switchCell(model: TableInputDetails(title: "Jumlah", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
+            .switchCell(model: TableInputDetailsIntro(title: "Jumlah", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
                 {
                 print("Jumlah")
             }),
-            .switchCell(model: TableInputDetails(title: "Harga", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
+            .switchCell(model: TableInputDetailsIntro(title: "Harga", icon: UIImage(systemName: "dot.square"), iconBackgrounColor: UIColor(named: "ButtonBrand")!, isOn: true)
                 {
                 print("Harga")
             })

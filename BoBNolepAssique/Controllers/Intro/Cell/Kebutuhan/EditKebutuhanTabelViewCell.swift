@@ -46,7 +46,7 @@ class EditKebutuhanTabelViewCell: UITableViewCell {
         textInputField.text = nil
     }
     
-    public func configure(with model: TableInputDetails) {
+    public func configure(with model: TableInputDetailsIntro) {
         label.text = model.title
     }
 

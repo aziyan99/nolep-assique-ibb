@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-struct SectionDetail {
+struct SectionDetailIntro {
     let title: String
-    let options: [TableInputType]
+    let options: [TableInputTypeIntro]
     let footer: String
 }
 
-enum TableInputType {
-    case switchCell(model: TableInputDetails)
+enum TableInputTypeIntro {
+    case switchCell(model: TableInputDetailsIntro)
 }
-struct TableInputDetails {
+struct TableInputDetailsIntro {
     let title: String
     let icon: UIImage?
     let iconBackgrounColor: UIColor
