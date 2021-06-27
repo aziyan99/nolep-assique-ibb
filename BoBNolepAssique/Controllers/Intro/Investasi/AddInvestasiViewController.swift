@@ -4,10 +4,20 @@
 //
 //  Created by Raja Azian on 23/06/21.
 //
-
 import UIKit
 
+enum InvestasiData: Int {
+    case nameTextField = 0
+    case jumlahTextField
+    case hargaTextField
+}
+
+
 class AddInvestasiViewController: ViewController {
+    
+    var nama: String!
+    var jumlah: String!
+    var harga: String!
     
     var models = [SectionDetail]()
     
@@ -45,7 +55,7 @@ class AddInvestasiViewController: ViewController {
     func setupNavbar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Tutup", style: .done, target: self, action: #selector(didTapTutupBtn))
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Selesai", style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Selesai", style: .plain, target: self, action: #selector(didTapSelesaiBtn))
     }
     
     override func viewDidLoad() {
@@ -57,6 +67,22 @@ class AddInvestasiViewController: ViewController {
     
     @objc func didTapTutupBtn(){
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func didTapSelesaiBtn() {
+        if !nama.isEmpty, !harga.isEmpty, !jumlah.isEmpty {
+            let newInvestasi = InvestasiHelper.createInvestasi()
+            newInvestasi.nama = self.nama
+            newInvestasi.jumlah = self.jumlah
+            newInvestasi.harga = cleanCharacter(val: self.harga)
+            newInvestasi.updated_at = Date()
+            InvestasiHelper.storeInvestasi()
+            
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "investasiUpdated"), object: nil)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
 
@@ -88,7 +114,35 @@ extension AddInvestasiViewController: UITableViewDelegate, UITableViewDataSource
                 return UITableViewCell()
             }
             cell.configure(with: model)
+            cell.textInputField.delegate = self
+            cell.textInputField.tag = indexPath.row
+
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+
+extension AddInvestasiViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
+    }
+    
+    @objc func valueChanged(_ textField: UITextField){
+        switch textField.tag {
+        case InvestasiData.nameTextField.rawValue:
+            self.nama = textField.text
+        case InvestasiData.jumlahTextField.rawValue:
+            self.jumlah = textField.text
+        case InvestasiData.hargaTextField.rawValue:
+            self.harga = textField.text
+        default:
+            break
         }
     }
 }
