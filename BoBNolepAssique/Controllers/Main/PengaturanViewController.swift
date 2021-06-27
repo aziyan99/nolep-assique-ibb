@@ -126,7 +126,7 @@ extension PengaturanViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.row == 0 {
+        if indexPath.row < 1 {
             let storyboard = UIStoryboard(name: "OnBoarding", bundle: nil)
             guard let onBoardingViewController = storyboard.instantiateViewController(identifier: "OnBoardingViewController") as? OnBoardingViewController else{
                 print("ViewController not found")
