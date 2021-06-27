@@ -33,6 +33,12 @@
 		08F91CD22679F588008BC4DE /* Pengaturan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F91CD12679F588008BC4DE /* Pengaturan.storyboard */; };
 		3FE03AEE267B472E00A30BD4 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE03AED267B472E00A30BD4 /* OnBoarding.storyboard */; };
 		3FE03AF1267B481700A30BD4 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE03AF0267B481700A30BD4 /* OnBoardingViewController.swift */; };
+		411E97B02684424F00B953CE /* RekapitulasiHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E97AF2684424F00B953CE /* RekapitulasiHeaderViewController.swift */; };
+		417DD6EC268875950045CB12 /* AktivitasBulanan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417DD6EB268875950045CB12 /* AktivitasBulanan.swift */; };
+		419ACCE026844D8C004545F2 /* KeinginanImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419ACCDF26844D8C004545F2 /* KeinginanImageViewController.swift */; };
+		419ACCE226844FFE004545F2 /* AktivitasBulananViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419ACCE126844FFE004545F2 /* AktivitasBulananViewController.swift */; };
+		41EE8F932688132500F949A4 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EE8F922688132500F949A4 /* CollectionTableViewCell.swift */; };
+		41EE8F952688169600F949A4 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EE8F942688169600F949A4 /* TileCollectionViewCell.swift */; };
 		905F3B3B2679F2AD008B1A84 /* Keinginan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905F3B3A2679F2AD008B1A84 /* Keinginan.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +72,12 @@
 		08F91CD12679F588008BC4DE /* Pengaturan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pengaturan.storyboard; sourceTree = "<group>"; };
 		3FE03AED267B472E00A30BD4 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		3FE03AF0267B481700A30BD4 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		411E97AF2684424F00B953CE /* RekapitulasiHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RekapitulasiHeaderViewController.swift; sourceTree = "<group>"; };
+		417DD6EB268875950045CB12 /* AktivitasBulanan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AktivitasBulanan.swift; sourceTree = "<group>"; };
+		419ACCDF26844D8C004545F2 /* KeinginanImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeinginanImageViewController.swift; sourceTree = "<group>"; };
+		419ACCE126844FFE004545F2 /* AktivitasBulananViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AktivitasBulananViewController.swift; sourceTree = "<group>"; };
+		41EE8F922688132500F949A4 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		41EE8F942688169600F949A4 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
 		905F3B3A2679F2AD008B1A84 /* Keinginan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keinginan.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +201,7 @@
 		08CDC5EA267AD7AA0073176F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				411E97AE2684421B00B953CE /* RekapitulasiView */,
 				08CDC5C2267ACB700073176F /* RekapitulasiViewController.swift */,
 				08CDC5C6267ACC3F0073176F /* KeinginanViewController.swift */,
 				08CDC5C4267ACC050073176F /* PengaturanViewController.swift */,
@@ -210,6 +223,27 @@
 				3FE03AF0267B481700A30BD4 /* OnBoardingViewController.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		411E97AE2684421B00B953CE /* RekapitulasiView */ = {
+			isa = PBXGroup;
+			children = (
+				419ACCE126844FFE004545F2 /* AktivitasBulananViewController.swift */,
+				41EE8F91268812EB00F949A4 /* KeinginanImage */,
+				411E97AF2684424F00B953CE /* RekapitulasiHeaderViewController.swift */,
+				417DD6EB268875950045CB12 /* AktivitasBulanan.swift */,
+			);
+			path = RekapitulasiView;
+			sourceTree = "<group>";
+		};
+		41EE8F91268812EB00F949A4 /* KeinginanImage */ = {
+			isa = PBXGroup;
+			children = (
+				419ACCDF26844D8C004545F2 /* KeinginanImageViewController.swift */,
+				41EE8F922688132500F949A4 /* CollectionTableViewCell.swift */,
+				41EE8F942688169600F949A4 /* TileCollectionViewCell.swift */,
+			);
+			path = KeinginanImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,15 +330,21 @@
 				08CDC5D4267AD5170073176F /* PendapatanViewController.swift in Sources */,
 				08CDC5EC267AE02A0073176F /* SceneDelegate.swift in Sources */,
 				08CDC5DE267AD6000073176F /* DanaImpulsifViewController.swift in Sources */,
+				417DD6EC268875950045CB12 /* AktivitasBulanan.swift in Sources */,
+				419ACCE226844FFE004545F2 /* AktivitasBulananViewController.swift in Sources */,
 				0820FD242681ECBB006DA8DD /* AddKebutuhanViewController.swift in Sources */,
 				08CDC5C5267ACC050073176F /* PengaturanViewController.swift in Sources */,
+				411E97B02684424F00B953CE /* RekapitulasiHeaderViewController.swift in Sources */,
 				0820FD222681BA84006DA8DD /* UIColorExtension.swift in Sources */,
+				419ACCE026844D8C004545F2 /* KeinginanImageViewController.swift in Sources */,
 				085370642678985400D30D8C /* ViewController.swift in Sources */,
 				08CDC5C3267ACB700073176F /* RekapitulasiViewController.swift in Sources */,
 				3FE03AF1267B481700A30BD4 /* OnBoardingViewController.swift in Sources */,
 				08CDC5C7267ACC3F0073176F /* KeinginanViewController.swift in Sources */,
 				085370602678985400D30D8C /* AppDelegate.swift in Sources */,
+				41EE8F952688169600F949A4 /* TileCollectionViewCell.swift in Sources */,
 				08CDC5DC267AD59A0073176F /* InvestasiViewController.swift in Sources */,
+				41EE8F932688132500F949A4 /* CollectionTableViewCell.swift in Sources */,
 				08CDC5D0267AD1C30073176F /* FirstCheck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
