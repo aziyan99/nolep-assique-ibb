@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct Overall {
+    var nama: String
+    var total: String
+}
+
 class PerkiraanBiayaViewController: ViewController {
     
     final var window: UIWindow?
@@ -16,15 +21,19 @@ class PerkiraanBiayaViewController: ViewController {
     @IBOutlet weak var topMessageValue: UILabel!
     @IBOutlet weak var perkiraanBiayaTableView: UITableView!
     
-    
-    let dummyData = [
-        ["Kebutuhan", "Rp 1.000.000,00"],
-        ["Investasi", "Rp 600.000,00"],
-        ["Impulsif", "Rp 0,00"]
-    ]
+    var results = [Overall]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.prepareData()
+        self.prepareView()
+    }
+    
+    func prepareData() {
+        self.calculateSisa()
+    }
+    
+    func prepareView() {
         title = "Perkiraan Biaya"
         self.btnSelesai.setTitle("Selesai", for: UIControl.State.normal)
         self.btnSelesai.layer.cornerRadius = 5
@@ -40,7 +49,32 @@ class PerkiraanBiayaViewController: ViewController {
         self.perkiraanBiayaTableView.delegate = self
         
         self.perkiraanBiayaTableView.backgroundColor = .systemGray6
+    }
+    
+    func calculateSisa() {
+        var dataKebutuhan = [Kebutuhan]()
+        var dataInvestasi = [Investasi]()
+        dataKebutuhan = KebutuhanHelper.getKebutuhan()
+        dataInvestasi = InvestasiHelper.getInvestasi()
         
+        
+        var totalKebutuhan: Double = 0.0
+        var totalInvestasi: Double = 0.0
+        for data in dataKebutuhan{
+            let harga = (data.harga! as NSString).doubleValue
+            totalKebutuhan += harga
+        }
+        for data in dataInvestasi{
+            let harga = (data.harga! as NSString).doubleValue
+            totalInvestasi += harga
+        }
+        
+        let resKebutuhan = (totalKebutuhan as NSNumber).stringValue
+        let resInvestasi = (totalInvestasi as NSNumber).stringValue
+        
+        self.results.append(Overall(nama: "Kebutuhan", total: idrFormatter(val: resKebutuhan)))
+        self.results.append(Overall(nama: "Investasi", total: idrFormatter(val: resInvestasi)))
+        self.results.append(Overall(nama: "Keinginan", total: idrFormatter(val: "0")))
     }
 
     @IBAction func didTapSelesaiBtn(_ sender: Any) {
@@ -67,10 +101,8 @@ class PerkiraanBiayaViewController: ViewController {
         
         self.present(optionMenu, animated: true, completion: nil)
     }
-    
-    
-    
 }
+
 
 extension PerkiraanBiayaViewController: UITableViewDelegate,
                                         UITableViewDataSource{
@@ -78,14 +110,14 @@ extension PerkiraanBiayaViewController: UITableViewDelegate,
      Table view
      */
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummyData.count
+        return self.results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = perkiraanBiayaTableView.dequeueReusableCell(withIdentifier: "perkiraanBiayaCell", for: indexPath)
         
-        cell.textLabel?.text = "\(dummyData[indexPath.row][0])"
-        cell.detailTextLabel?.text = "\(dummyData[indexPath.row][0])"
+        cell.textLabel?.text = self.results[indexPath.row].nama
+        cell.detailTextLabel?.text = self.results[indexPath.row].total
         
         cell.accessoryType = .disclosureIndicator
         
@@ -125,3 +157,4 @@ extension PerkiraanBiayaViewController: UITableViewDelegate,
         return "Ini adalah total perkiraan biaya dari masing-masing akumulasi pembagian keuangan kamu, jangan takut untuk mengubahnya lagi jika menurutmu kurang tepat."
     }
 }
+
