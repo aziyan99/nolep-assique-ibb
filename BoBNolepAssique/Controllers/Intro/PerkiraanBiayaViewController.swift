@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Charts
 
 struct Overall {
     var nama: String
@@ -20,9 +21,7 @@ class PerkiraanBiayaViewController: ViewController {
     @IBOutlet weak var topMessageContainer: UIView!
     @IBOutlet weak var topMessageValue: UILabel!
     @IBOutlet weak var perkiraanBiayaTableView: UITableView!
-    
-    let players = ["Ozil", "Ramsey", "Laca", "Auba", "Xhaka", "Torreira"]
-    let goals = [6, 8, 26, 30, 8, 10]
+    @IBOutlet weak var pieChartView: PieChartView!
     
     var results = [Overall]()
     
@@ -36,22 +35,45 @@ class PerkiraanBiayaViewController: ViewController {
     
     func customizeChart(dataPoints: [String], values: [Double]) {
         // 1. Set ChartDataEntry
-          var dataEntries: [ChartDataEntry] = []
-          for i in 0..<dataPoints.count {
-            let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
-            dataEntries.append(dataEntry)
-          }
-          // 2. Set ChartDataSet
-          let pieChartDataSet = PieChartDataSet(values: dataEntries, label: nil)
-          pieChartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
-          // 3. Set ChartData
-          let pieChartData = PieChartData(dataSet: pieChartDataSet)
-          let format = NumberFormatter()
-          format.numberStyle = .none
-          let formatter = DefaultValueFormatter(formatter: format)
-          pieChartData.setValueFormatter(formatter)
-          // 4. Assign it to the chart’s data
-          pieChartView.data = pieChartData
+         var dataEntries: [ChartDataEntry] = []
+         for i in 0..<dataPoints.count {
+           let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
+           dataEntries.append(dataEntry)
+         }
+        
+         // 2. Set ChartDataSet
+        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
+        pieChartDataSet.colors = ChartColorTemplates.pastel()
+        
+         // 3. Set ChartData
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        let format = NumberFormatter()
+        format.numberStyle = .percent
+        let formatter = DefaultValueFormatter(formatter: format)
+        pieChartData.setValueFormatter(formatter)
+        
+         // 4. Assign it to the chart’s data
+        pieChartView.legend.enabled = false
+        pieChartView.rotationEnabled = true
+        pieChartView.isUserInteractionEnabled = true
+        pieChartView.tintColor = .darkGray
+        pieChartView.data = pieChartData
+    }
+    
+    private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
+        var colors: [UIColor] = []
+        for index in 0..<numbersOfColor {
+            var color = UIColor()
+            if index == 0 {
+                color = UIColor(red: CGFloat(94/255), green: CGFloat(101/255), blue: CGFloat(121/255), alpha: 1)
+            }else if index == 1 {
+                color = UIColor(red: CGFloat(212/255), green: CGFloat(156/255), blue: CGFloat(130/255), alpha: 1)
+            }else{
+                color = UIColor(red: CGFloat(63/255), green: CGFloat(52/255), blue: CGFloat(61/255), alpha: 1)
+            }
+            colors.append(color)
+        }
+        return colors
     }
     
     func prepareData() {
@@ -73,7 +95,7 @@ class PerkiraanBiayaViewController: ViewController {
         self.perkiraanBiayaTableView.dataSource = self
         self.perkiraanBiayaTableView.delegate = self
         
-        self.perkiraanBiayaTableView.backgroundColor = .systemGray6
+//        self.perkiraanBiayaTableView.backgroundColor = .systemGray6
     }
     
     func calculateSisa() {

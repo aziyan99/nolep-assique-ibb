@@ -16,6 +16,7 @@
 		085370672678985400D30D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085370652678985400D30D8C /* Main.storyboard */; };
 		0853706C2678985500D30D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0853706B2678985500D30D8C /* Assets.xcassets */; };
 		0853706F2678985500D30D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0853706D2678985500D30D8C /* LaunchScreen.storyboard */; };
+		086B2C832688F873006A4B97 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086B2C822688F873006A4B97 /* CommonData.swift */; };
 		08A841442688CE9E00787693 /* Pendapatan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841422688CE9E00787693 /* Pendapatan+CoreDataClass.swift */; };
 		08A841452688CE9E00787693 /* Pendapatan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841432688CE9E00787693 /* Pendapatan+CoreDataProperties.swift */; };
 		08A841482688CEB400787693 /* Sisa+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A841462688CEB400787693 /* Sisa+CoreDataClass.swift */; };
@@ -75,6 +76,7 @@
 		0853706B2678985500D30D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0853706E2678985500D30D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		085370702678985500D30D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		086B2C822688F873006A4B97 /* CommonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
 		08A841422688CE9E00787693 /* Pendapatan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		08A841432688CE9E00787693 /* Pendapatan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pendapatan+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		08A841462688CEB400787693 /* Sisa+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sisa+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -252,6 +254,7 @@
 				08A8415F2688D0DE00787693 /* StructCell.swift */,
 				08A841612688D12500787693 /* NumberFormatter.swift */,
 				08A841632688D14300787693 /* IdrFormatter.swift */,
+				086B2C822688F873006A4B97 /* CommonData.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				08A841602688D0DE00787693 /* StructCell.swift in Sources */,
 				08CDC5C3267ACB700073176F /* RekapitulasiViewController.swift in Sources */,
 				3FE03AF1267B481700A30BD4 /* OnBoardingViewController.swift in Sources */,
+				086B2C832688F873006A4B97 /* CommonData.swift in Sources */,
 				08CDC5C7267ACC3F0073176F /* KeinginanViewController.swift in Sources */,
 				08C2BF6726857455005A9B26 /* EditKebutuhanTabelViewCell.swift in Sources */,
 				08C2BF6E26858516005A9B26 /* EditInvestasiTableViewCell.swift in Sources */,
