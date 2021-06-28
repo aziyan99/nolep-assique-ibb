@@ -9,6 +9,46 @@
 import UIKit
 import CoreData
 
+
+//extension Date {
+//    init(_ dateString:String) {
+//        let dateStringFormatter = DateFormatter()
+//        dateStringFormatter.dateFormat = "dd-MM-yyyy"
+//        dateStringFormatter.timeZone = NSTimeZone(name:"UTC") as TimeZone?
+//        let date = dateStringFormatter.date(from: dateString)!
+//        self.init(timeInterval:0, since:date)
+//    }
+//}
+//
+//extension Array where Element: Keinginan {
+//    func groupedBy(dateComponents: Set<Calendar.Component>) -> [String: [Element]] {
+//        let initial: [String: [Element]] = [:]
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy MM dd"
+//        let groupedByDateComponents = reduce(into: initial) { acc, cur in
+//            let components = Calendar.current.dateComponents(dateComponents, from: cur.updated_at!)
+//            let date = dateFormatter.string(from: Calendar.current.date(from: components)!)
+//            let existing = acc[date] ?? []
+//            acc[date] = existing + [cur]
+//        }
+//        return groupedByDateComponents
+//    }
+//}
+//
+//extension String {
+//    func symbolToImage() -> UIImage {
+//        let size = CGSize(width: 35, height: 38)
+//        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+//        UIColor.clear.set()
+//        let rect = CGRect(origin: .zero, size: size)
+//        UIRectFill(CGRect(origin: .zero, size: size))
+//        (self as AnyObject).draw(in: rect, withAttributes: [.font: UIFont.systemFont(ofSize: 30)])
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        return image ?? UIImage()
+//    }
+//}
+
 struct SectionDetail {
     let title: String
     let options: [TableInputType]
@@ -40,16 +80,77 @@ struct TableUploadImage {
     let title: String
 }
 
+protocol ItemSavedDelegate: class {
+    func itemSaved()
+}
+
 class DetailKeinginanViewController: UIViewController {
     let defaultTitle = "Keinginan"
     var models = [SectionDetail]()
     
     var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     var appDelegate = UIApplication.shared.delegate as? AppDelegate
+    var keinginanList = [String: [Keinginan]]()
+    var keinginan = [Keinginan]()
+    
     var dateDifference = DateComponents()
     var category: Category?
-//    var itemSavedDelegate: ItemSavedDelegate?
+    var itemSavedDelegate: ItemSavedDelegate?
     
+    var productName : String = ""
+    
+    func onSave() {
+        print ("SKUYY SAVE")
+        let keinginanRequest: NSFetchRequest<Keinginan> = Keinginan.fetchRequest()
+        print(keinginanRequest ,"REQ KEINGINAN")
+        do {
+            do {
+                try keinginan = managedObjectContext.fetch(keinginanRequest)
+                print(keinginan, "KEINGINAN")
+                let entity = NSEntityDescription.entity(forEntityName: "Keinginan", in: managedObjectContext)
+                let newKeinginan = NSManagedObject(entity: entity!, insertInto: managedObjectContext)
+                var incrementId = 0
+                if keinginan.count == 0 {
+                    incrementId = 1
+                } else {
+                    incrementId = Int(keinginan.last!.id + 1)
+                }
+                
+                let cellName = tableView.cellForRow(at:IndexPath(row:0, section: 0)) as! DetailKeinginanTableViewCell
+                let cellJumlah = tableView.cellForRow(at:IndexPath(row:1, section: 0)) as! DetailKeinginanTableViewCell
+                let cellHarga = tableView.cellForRow(at:IndexPath(row:2, section: 0)) as! DetailKeinginanTableViewCell
+                let cellLokasi = tableView.cellForRow(at:IndexPath(row:3, section: 0)) as! DetailKeinginanTableViewCell
+                
+                
+                let cellCatatan = tableView.cellForRow(at:IndexPath(row:0, section: 2)) as! DetailKeinginanNoteTableViewCell
+                
+                
+                let cellSwitch = tableView.cellForRow(at:IndexPath(row:0, section: 1)) as! DetailKeinginanSwitchTableViewCell
+                
+                newKeinginan.setValue(incrementId, forKey: "id")
+                newKeinginan.setValue(cellName.textInputField.text!, forKey: "nama")
+                newKeinginan.setValue(Int64(cellJumlah.textInputField.text!), forKey: "jumlah")
+                newKeinginan.setValue(cellHarga.textInputField.text!, forKey: "harga")
+                newKeinginan.setValue(cellLokasi.textInputField.text!, forKey: "lokasi")
+
+                newKeinginan.setValue(cellSwitch.switcher.isOn, forKey: "is_active")
+//
+                newKeinginan.setValue(cellCatatan.textInputField.text!, forKey: "catatan")
+                newKeinginan.setValue(NSDate.now, forKey: "updated_at")
+                newKeinginan.setValue("Belum dibeli", forKey: "status")
+                
+                try managedObjectContext.save()
+//                setNotif()
+                print("Save Success")
+                itemSavedDelegate?.itemSaved()
+                dismiss(animated: true, completion: nil)
+            } catch let error as NSError {
+                print("Failed to generate new ID \(error)")
+            }
+        } catch let e as NSError {
+            print("Save Error \(e)")
+        }
+    }
     
     @IBOutlet weak var buttonCancel: UIButton!
     @IBOutlet weak var buttonDone: UIButton!
@@ -104,7 +205,8 @@ class DetailKeinginanViewController: UIViewController {
     
     @objc func buttonSaveModal() {
         print("BUTTON SAVE MODAL")
-        self.dismiss(animated: true, completion: nil)
+        onSave()
+//        self.dismiss(animated: true, completion: nil)
     }
     
     func setupNavbar() {
@@ -119,6 +221,9 @@ class DetailKeinginanViewController: UIViewController {
         super.viewDidLoad()
         setupNavbar()
         setupTable()
+        managedObjectContext = appDelegate?.persistentContainer.viewContext as! NSManagedObjectContext
+//        getDataKeinginan(isFilter: false, filterValue: "")
+//        print(keinginanList, "KEINGINAN LIST")
     }
 }
 

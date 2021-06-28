@@ -50,7 +50,7 @@ class DetailKeinginanUploadTableViewCell: UITableViewCell {
 class DetailKeinginanNoteTableViewCell: UITableViewCell {
     static let identifier = "DetailKeinginanNoteTableViewCell"
     
-    private let textInputField: UITextField = {
+    let textInputField: UITextField = {
         let textInput = UITextField()
         textInput.placeholder = "Tuliskan catatan ..."
         textInput.autocorrectionType = .no
@@ -89,14 +89,14 @@ class DetailKeinginanNoteTableViewCell: UITableViewCell {
 class DetailKeinginanSwitchTableViewCell: UITableViewCell {
     static let identifier = "DetailKeinginanSwitchTableViewCell"
     
-    private let label: UILabel = {
+    let label: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 17.0)
         return label
     }()
     
-    private let switcher: UISwitch = {
+    let switcher: UISwitch = {
         let swtich = UISwitch()
         swtich.onTintColor = .systemGreen
         return swtich
@@ -138,14 +138,14 @@ class DetailKeinginanSwitchTableViewCell: UITableViewCell {
 class DetailKeinginanTableViewCell: UITableViewCell {
     static let identifier = "DetailKeinginanTableViewCell"
     
-    private let label: UILabel = {
+    let label: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 17.0)
         return label
     }()
     
-    private let textInputField: UITextField = {
+    let textInputField: UITextField = {
         let textInput = UITextField()
         textInput.placeholder = "Default"
         textInput.autocorrectionType = .no

@@ -6,10 +6,28 @@
 //
 
 import UIKit
+import CoreData
 
 class PengaturanViewController: ViewController {
     var models = [SectionSettings]()
     var window: UIWindow?
+    var pendapatanList = [Pendapatan]()
+    var formatData: [SectionSettings] = []
+    
+    var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    
+    func getDataPengaturan() {
+        let pendapatanRequest: NSFetchRequest<Pendapatan> = Pendapatan.fetchRequest()
+        do {
+            try pendapatanList = managedObjectContext.fetch(pendapatanRequest)
+        } catch {
+            print("Couldn't load the keinginan data!")
+        }
+        formatData = []
+        self.setupModel()
+        self.tableView.reloadData()
+    }
 
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
@@ -19,8 +37,10 @@ class PengaturanViewController: ViewController {
     }()
     
     func setupModel() {
+        let firstPendapatan = pendapatanList.first
+        print(firstPendapatan, "FIST PENDAPAT")
         models.append(SectionSettings(title: "Pendapatan Bulanan", options: [
-            .staticCell(model: SettingsOption(title: "1.000.000,00", icon: UIImage(systemName: "triangle"), iconBackgrounColor: UIColor(named: "ButtonBrand")!) {
+            .staticCell(model: SettingsOption(title: (firstPendapatan?.total)!, icon: UIImage(systemName: "triangle"), iconBackgrounColor: UIColor(named: "ButtonBrand")!) {
                 print("PENDAPATANMU")
             })
         ], footer: "Kamu dapat melakukan perubahan total pendapatan dan mengubah estimasi pengeluaranmu dalam sebulan."))
@@ -34,7 +54,6 @@ class PengaturanViewController: ViewController {
     }
     
     func setupTableView() {
-        setupModel()
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -56,6 +75,8 @@ class PengaturanViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        managedObjectContext = (appDelegate?.persistentContainer.viewContext)!
+        getDataPengaturan()
         setupNavbar()
         setupTableView()
     }
