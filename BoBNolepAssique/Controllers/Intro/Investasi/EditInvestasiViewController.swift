@@ -85,7 +85,6 @@ class EditInvestasiViewController: ViewController {
             print("emptyyy")
         }
     }
-
 }
 
 

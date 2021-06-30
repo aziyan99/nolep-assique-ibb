@@ -57,5 +57,4 @@ struct KebutuhanHelper {
             destroyKebutuhan(kebutuhan: data)
         }
     }
-    
 }

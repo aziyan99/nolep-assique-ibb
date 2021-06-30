@@ -130,7 +130,6 @@ class InvestasiViewController: ViewController {
             editInvestasiViewController.investasi = dataInvestasi[indexPath.row]
         }
     }
-    
 }
 
 
